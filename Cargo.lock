@@ -6492,6 +6492,9 @@ dependencies = [
 name = "tlsn-examples"
 version = "0.0.0"
 dependencies = [
+ "anyhow",
+ "base64 0.22.1",
+ "bcs",
  "bincode",
  "chrono",
  "clap 4.5.39",
@@ -6503,6 +6506,7 @@ dependencies = [
  "hyper-util",
  "k256",
  "notary-client",
+ "serde",
  "serde_json",
  "spansy",
  "tls-server-fixture",

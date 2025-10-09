@@ -251,39 +251,220 @@ console.log('Notary:', data.verification.notary_pubkey);
 
 ### Full Cryptographic Verification
 
-For a complete example of how to verify the presentation and extract the price, see:
-
-**[crates/examples/verify_presentation.rs](crates/examples/verify_presentation.rs)**
-
-This example demonstrates:
-- Loading and deserializing the presentation
-- Verifying the Notary's signature (ECDSA with Keccak-256)
-- Verifying all Merkle proofs
-- Extracting the price from the authenticated HTTP response
+For a complete working example, see **[crates/examples/verify_presentation.rs](crates/examples/verify_presentation.rs)**
 
 Run it with:
 ```bash
 cargo run --example verify_presentation
 ```
 
-### Verification in Noir Circuit (ZK Proof)
-
-The ultimate goal is to verify the proof in a Noir circuit for on-chain verification.
-
-**High-level steps:**
-
-1. **Decode the presentation from bincode**
-2. **Verify the Notary's signature** (ECDSA with Keccak-256)
-3. **Verify Merkle proofs** (Body → Header, Transcript → Body)
-4. **Extract and validate the price**
-5. **Generate a ZK proof** that all checks passed
-
-
-For complete Noir implementation details, see:
-- [NOIR_VERIFICATION_REQUIREMENTS.md](NOIR_VERIFICATION_REQUIREMENTS.md)
-- [SIGNATURE_VERIFICATION_GUIDE.md](SIGNATURE_VERIFICATION_GUIDE.md)
-
 ---
+
+## How Verification Works (Cryptographic Details)
+
+This section explains the cryptographic verification process step-by-step, enabling implementation in any language or ZK circuit.
+
+### The Verification Chain
+
+```
+Notary Signature
+     ↓ (signs)
+Header (contains header.root)
+     ↓ (commits via Merkle)
+Body (contains transcript_commitments[0])
+     ↓ (commits via Merkle)
+Transcript (HTTP request/response)
+     ↓ (contains)
+Price Data
+```
+
+Each level cryptographically commits to the next, creating an unbroken chain from signature to price.
+
+### Step 1: Verify Notary's Signature
+
+**What is signed:** Header structure (BCS-serialized)
+
+**Algorithm:** ECDSA secp256k1 + Keccak-256
+
+**Process:**
+
+1. **Serialize Header with BCS**:
+   - Length-prefix id: `[0x10] + id_bytes (16 bytes)`
+   - Version as little-endian u16: `2 bytes`
+   - Root.alg as u8: `1 byte`
+   - Length-prefix root.value: `[0x20] + value_bytes (32 bytes)`
+   - Total: ~53 bytes
+
+2. **Hash with Keccak-256**:
+   ```
+   message_hash = Keccak256(header_bytes)  // 32 bytes
+   ```
+
+3. **Verify ECDSA**:
+   ```
+   ECDSA_verify(
+     pubkey: notary_pubkey (33 bytes compressed),
+     message: message_hash (32 bytes),
+     signature: [r(32), s(32), v(1)]  // 65 bytes total
+   )
+   ```
+
+**Why:** Proves Notary attested to this Header, which commits to all Body fields via `header.root`.
+
+### Step 2: Verify Body Merkle Proof
+
+**Goal:** Prove Body fields are in `header.root`
+
+**Merkle tree fields:**
+- Field 0: `verifying_key`
+- Field 1: `connection_info`
+- Field 2: `server_ephemeral_key`
+- Field 3: `cert_commitment`
+- Field 4: `transcript_commitments`
+
+**Hash:** Blake3 (`header.root.alg = 2`)
+
+**Process:**
+
+1. **Hash each field**:
+   ```
+   leaf_i = Blake3(BCS_serialize(field_i))
+   ```
+
+2. **Build binary Merkle tree**:
+   ```
+   node_0_1 = Blake3(leaf_0 || leaf_1)
+   node_2_3 = Blake3(leaf_2 || leaf_3)
+   node_0_3 = Blake3(node_0_1 || node_2_3)
+   root = Blake3(node_0_3 || leaf_4)
+   ```
+
+3. **Verify**:
+   ```
+   assert(computed_root == header.root.value)
+   ```
+
+**Why:** Proves `transcript_commitments` is authentic (not tampered).
+
+### Step 3: Verify Transcript Merkle Proof
+
+**Goal:** Prove revealed HTTP data is in `transcript_commitments[0]`
+
+**Commitment scheme:** Encoding commitment (blinded chunks + Merkle tree)
+
+**Structure:**
+```json
+{
+  "root": { "alg": 2, "value": [32 bytes] },
+  "secret": { "seed": [32 bytes], "delta": [16 bytes] }
+}
+```
+
+**Process:**
+
+1. **Split transcript into chunks** (16 bytes each)
+
+2. **Decode revealed chunks**:
+   ```
+   For each chunk_i:
+     encoding_key_i = derive_key(secret.seed, secret.delta, i)
+     plaintext_i = committed_chunk_i XOR encoding_key_i
+   ```
+
+3. **Recompute Merkle tree**:
+   ```
+   leaf_i = Blake3(plaintext_i)
+   Build tree → computed_root
+   ```
+
+4. **Verify**:
+   ```
+   assert(computed_root == transcript_commitment.root.value)
+   ```
+
+**Why:** Proves HTTP data is exactly what was transmitted. Cannot modify even one byte.
+
+**Key insight:** Encoding commitment enables selective disclosure - reveal only needed parts.
+
+### Step 4: Verify Server Identity (Optional)
+
+**Goal:** Prove connection was with api.binance.com
+
+**Process:**
+
+1. **Verify TLS certificate chain**:
+   - Extract certs from `identity.opening.data.certs`
+   - Verify signatures (leaf ← intermediate ← root CA)
+   - Check validity period at `connection_info.time`
+   - Verify domain matches (`*.binance.com`)
+
+2. **Verify cert_commitment**:
+   ```
+   computed = Blake3(BCS_serialize(certs))
+   assert(computed == body.cert_commitment.value)
+   ```
+
+3. **Verify server's ephemeral key** matches TLS handshake
+
+**Why:** Proves connection was with authentic Binance, not impersonator.
+
+### Step 5: Extract Price Data
+
+**Goal:** Get price from authenticated response
+
+**Process:**
+
+1. **Parse HTTP response**:
+   ```
+   http_response = transcript.received_authed
+   body_start = find("\r\n\r\n") + 4
+   json_body = http_response[body_start:]
+   ```
+
+2. **Parse JSON**:
+   ```
+   data = JSON.parse(json_body)
+   price = data.price  // "123104.96000000"
+   ```
+
+3. **Validate**:
+   ```
+   assert(data.symbol == "BTCUSDT")
+   assert(price > 0)
+   ```
+
+**Why:** Final extraction of oracle data from authenticated chain.
+
+### What Gets Verified
+
+✅ **Signature**: Notary's ECDSA on Header (Keccak-256)
+✅ **Body integrity**: Fields in `header.root` (Blake3 Merkle)
+✅ **Transcript authenticity**: HTTP in `transcript_commitments` (encoding + Merkle)
+✅ **Server identity**: TLS cert chain valid (X.509)
+✅ **Data extraction**: Price from authenticated response
+
+### Security Properties
+
+- **Authenticity**: Data from Binance (if identity verified)
+- **Integrity**: Cannot tamper (breaks Merkle proofs)
+- **Non-repudiation**: Notary cannot deny signing
+- **Timestamp**: Connection time proven
+- **Privacy**: Selective disclosure supported
+
+### Implementation Requirements
+
+**Cryptographic primitives needed:**
+- BCS serialization (Diem/Sui format)
+- Keccak-256 hashing (Ethereum-compatible)
+- Blake3 hashing (Merkle trees)
+- ECDSA secp256k1 verification
+- X.509 certificate parsing (optional)
+
+**Key formats:**
+- Header: `{ id: [16]u8, version: u16, root: Hash }`
+- Signature: `{ alg: u8, data: [65]u8 }` (r || s || v)
+- Hash: `{ alg: u8, value: [32]u8 }`
+
 
 ## Signature Algorithm Details
 
@@ -313,49 +494,6 @@ This oracle uses **SECP256K1ETH** signatures exclusively:
 }
 ```
 
----
-
-## Troubleshooting
-
-If not, start it:
-
-```bash
-NS_NOTARIZATION__SIGNATURE_ALGORITHM=secp256k1eth target/release/notary-server
-```
-
-### Error: "unexpected end of file"
-
-**Solution**: The Notary and Oracle might be using incompatible configurations. Make sure:
-1. The Notary server was started with `NS_NOTARIZATION__SIGNATURE_ALGORITHM=secp256k1eth`
-2. Both servers are running
-3. Restart both servers if needed
-
-### Proof verification fails in Noir
-
-**Check**:
-1. Using Keccak-256 for hashing (not SHA-256) in your circuit
-2. ECDSA signature verification is configured for secp256k1
-3. BCS serialization of the header matches the expected format
-4. Merkle proofs are properly constructed with Blake3 hashing
-
----
-
-## Production Deployment
-
-For production:
-
-1. **Use a persistent Notary key**:
-   ```bash
-   openssl ecparam -name secp256k1 -genkey -noout -out notary_key.pem
-   ```
-
-2. **Enable TLS** on Notary server
-3. **Configure rate limiting** on Oracle server
-4. **Add authentication** (see notary server config)
-5. **Cache presentations** to reduce proof generation
-6. **Monitor the Notary** public key (log it on startup)
-
----
 
 ## Resources
 

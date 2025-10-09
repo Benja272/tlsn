@@ -42,6 +42,10 @@ tokio = { workspace = true, features = [
 tokio-util = { workspace = true }
 tracing = { workspace = true }
 tracing-subscriber = { workspace = true }
+anyhow = { workspace = true }
+serde = { workspace = true }
+bcs = { workspace = true }
+base64 = "0.22"
 
 [[example]]
 name = "attestation_prove"
@@ -58,3 +62,15 @@ path = "attestation/verify.rs"
 [[example]]
 name = "interactive"
 path = "interactive/interactive.rs"
+
+[[example]]
+name = "binance_oracle"
+path = "binance_oracle.rs"
+
+[[example]]
+name = "verify_presentation"
+path = "verify_presentation.rs"
+
+[[example]]
+name = "binance_oracle_server"
+path = "binance_oracle_server.rs"

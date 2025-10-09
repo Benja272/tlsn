@@ -7,7 +7,7 @@ use pkcs8::{
     AssociatedOid, DecodePrivateKey, LineEnding, PrivateKeyInfo,
 };
 use rand06_compat::Rand0_6CompatExt;
-use tlsn_core::signing::{Secp256k1Signer, Secp256r1Signer, SignatureAlgId, Signer};
+use tlsn_core::signing::{Secp256k1EthSigner, Secp256k1Signer, Secp256r1Signer, SignatureAlgId, Signer};
 use tracing::error;
 
 /// A cryptographic key used for signing attestations.
@@ -65,19 +65,29 @@ impl AttestationKey {
                     &mut rand::rng().compat(),
                 )),
             }),
-            alg_id => Err(eyre!("unsupported signature algorithm: {alg_id} — only secp256k1 and secp256r1 are supported")),
+            "SECP256K1ETH" => Ok(Self {
+                alg_id: SignatureAlgId::SECP256K1ETH,
+                key: SigningKey::Secp256k1(k256::ecdsa::SigningKey::random(
+                    &mut rand::rng().compat(),
+                )),
+            }),
+            alg_id => Err(eyre!("unsupported signature algorithm: {alg_id} — only secp256k1, secp256r1, and secp256k1eth are supported")),
         }
     }
 
     /// Creates a new signer using this key.
     pub fn into_signer(self) -> Box<dyn Signer + Send + Sync> {
-        match self.key {
-            SigningKey::Secp256k1(key) => {
+        match (self.alg_id, self.key) {
+            (SignatureAlgId::SECP256K1, SigningKey::Secp256k1(key)) => {
                 Box::new(Secp256k1Signer::new(&key.to_bytes()).expect("key should be valid"))
             }
-            SigningKey::Secp256r1(key) => {
+            (SignatureAlgId::SECP256R1, SigningKey::Secp256r1(key)) => {
                 Box::new(Secp256r1Signer::new(&key.to_bytes()).expect("key should be valid"))
             }
+            (SignatureAlgId::SECP256K1ETH, SigningKey::Secp256k1(key)) => {
+                Box::new(Secp256k1EthSigner::new(&key.to_bytes()).expect("key should be valid"))
+            }
+            _ => unreachable!("invalid algorithm and key combination"),
         }
     }
 

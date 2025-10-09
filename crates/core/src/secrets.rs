@@ -11,7 +11,8 @@ pub struct Secrets {
     pub(crate) server_name: ServerName,
     pub(crate) server_cert_opening: ServerCertOpening,
     pub(crate) transcript: Transcript,
-    pub(crate) transcript_commitments: Vec<TranscriptCommitment>,
+    /// Transcript commitments made during attestation.
+    pub transcript_commitments: Vec<TranscriptCommitment>,
     pub(crate) transcript_commitment_secrets: Vec<TranscriptSecret>,
 }
 

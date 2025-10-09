@@ -22,6 +22,7 @@ use crate::{
 /// added to the official set, please open an issue. Beware that other parties
 /// may assign different algorithms to the same ID as you, and we make no effort
 /// to mitigate this.
+///
 pub struct CryptoProvider {
     /// Hash provider.
     pub hash: HashProvider,

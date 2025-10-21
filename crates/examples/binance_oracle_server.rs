@@ -21,17 +21,14 @@ use hyper::{Request, Response, StatusCode};
 use hyper_util::rt::TokioIo;
 use serde::{Deserialize, Serialize};
 use tlsn_core::hash::{HashAlgId, Keccak256};
-use tlsn_core::signing::{Secp256k1EthVerifier, Secp256r1Signer, SignatureAlgId};
+use tlsn_core::signing::{Secp256k1EthVerifier, SignatureAlgId};
 use tokio::net::TcpListener;
 use tokio_util::compat::{FuturesAsyncReadCompatExt, TokioAsyncReadCompatExt};
 use tracing::{error, info};
 
 use notary_client::{Accepted, NotarizationRequest, NotaryClient};
 use tlsn_common::config::ProtocolConfig;
-use tlsn_core::{
-    presentation::Presentation, request::RequestConfig, transcript::TranscriptCommitConfig,
-    CryptoProvider,
-};
+use tlsn_core::{request::RequestConfig, transcript::TranscriptCommitConfig, CryptoProvider};
 use tlsn_prover::{Prover, ProverConfig};
 
 const API_HOST: &str = "api.binance.com";
@@ -59,6 +56,8 @@ struct OracleResponse {
     verification: VerificationResult,
     /// The serialized header of the attestation
     header_serialized: Vec<u8>,
+    /// Field hashes in merkle tree order
+    field_hashes: Vec<Vec<u8>>,
 }
 
 #[derive(Debug, Serialize)]
@@ -314,6 +313,15 @@ async fn generate_oracle_proof() -> Result<OracleResponse, Box<dyn std::error::E
         _ => "unknown",
     };
 
+    // Compute field hashes in merkle tree order
+    let hasher = Keccak256 {};
+    let field_hashes: Vec<Vec<u8>> = attestation
+        .body
+        .hash_fields(&hasher)
+        .into_iter()
+        .map(|(_, hash)| hash.value[..hash.len].to_vec())
+        .collect();
+
     Ok(OracleResponse {
         presentation_bincode,
         presentation_json,
@@ -327,5 +335,6 @@ async fn generate_oracle_proof() -> Result<OracleResponse, Box<dyn std::error::E
             signature_algorithm: sig_alg.to_string(),
         },
         header_serialized: bcs::to_bytes(&attestation.header).unwrap(),
+        field_hashes,
     })
 }

@@ -187,7 +187,7 @@ impl Body {
     /// # Note
     ///
     /// The order of fields is not stable across versions.
-    pub(crate) fn hash_fields(&self, hasher: &dyn HashAlgorithm) -> Vec<(FieldId, Hash)> {
+    pub fn hash_fields(&self, hasher: &dyn HashAlgorithm) -> Vec<(FieldId, Hash)> {
         // CRITICAL: ensure all fields are included! If a new field is added to the
         // struct without including it here, it will not be included in the attestation.
         let Self {

@@ -111,10 +111,13 @@ pub struct TypedHash {
 /// A hash value.
 #[derive(Debug, Clone, Copy, PartialEq, Eq, Hash)]
 pub struct Hash {
-    // To avoid heap allocation, we use a fixed-size array.
-    // 64 bytes should be sufficient for most hash algorithms.
-    value: [u8; MAX_LEN],
-    len: usize,
+    /// The hash value as a fixed-size array.
+    ///
+    /// To avoid heap allocation, we use a fixed-size array.
+    /// 64 bytes should be sufficient for most hash algorithms.
+    pub value: [u8; MAX_LEN],
+    /// The actual length of the hash value.
+    pub len: usize,
 }
 
 impl Default for Hash {

@@ -179,9 +179,15 @@ checksum = "683d7910e743518b0e34f1186f92494becacb047c7b6bf616c96772180fef923"
 name = "alloy-consensus"
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 version = "0.12.6"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "6fbf458101ed6c389e9bb70a34ebc56039868ad10472540614816cdedc8f5265"
+=======
+version = "1.0.41"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "b9b151e38e42f1586a01369ec52a6934702731d07e8509a7307331b09f6c46dc"
+>>>>>>> Stashed changes
 =======
 version = "1.0.41"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -214,9 +220,15 @@ dependencies = [
 name = "alloy-consensus-any"
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 version = "0.12.6"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "fc982af629e511292310fe85b433427fd38cb3105147632b574abc997db44c91"
+=======
+version = "1.0.41"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "6e2d5e8668ef6215efdb7dcca6f22277b4e483a5650e05f5de22b2350971f4b8"
+>>>>>>> Stashed changes
 =======
 version = "1.0.41"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -276,9 +288,15 @@ dependencies = [
 name = "alloy-eips"
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 version = "0.12.6"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "6e86967eb559920e4b9102e4cb825fe30f2e9467988353ce4809f0d3f2c90cd4"
+=======
+version = "1.0.41"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "e5434834adaf64fa20a6fb90877bc1d33214c41b055cc49f82189c98614368cc"
+>>>>>>> Stashed changes
 =======
 version = "1.0.41"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -321,9 +339,15 @@ dependencies = [
 name = "alloy-json-rpc"
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 version = "0.12.6"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "27434beae2514d4a2aa90f53832cbdf6f23e4b5e2656d95eaf15f9276e2418b6"
+=======
+version = "1.0.41"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "d7c69f6c9c68a1287c9d5ff903d0010726934de0dac10989be37b75a29190d55"
+>>>>>>> Stashed changes
 =======
 version = "1.0.41"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -347,9 +371,15 @@ dependencies = [
 name = "alloy-network"
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 version = "0.12.6"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "26a33a38c7486b1945f8d093ff027add2f3a8f83c7300dbad6165cc49150085e"
+=======
+version = "1.0.41"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "8eaf2ae05219e73e0979cb2cf55612aafbab191d130f203079805eaf881cca58"
+>>>>>>> Stashed changes
 =======
 version = "1.0.41"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -385,9 +415,15 @@ dependencies = [
 name = "alloy-network-primitives"
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 version = "0.12.6"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "db973a7a23cbe96f2958e5687c51ce2d304b5c6d0dc5ccb3de8667ad8476f50b"
+=======
+version = "1.0.41"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "e58f4f345cef483eab7374f2b6056973c7419ffe8ad35e994b7a7f5d8e0c7ba4"
+>>>>>>> Stashed changes
 =======
 version = "1.0.41"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -427,6 +463,9 @@ dependencies = [
  "hashbrown 0.16.0",
  "indexmap 2.12.0",
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
@@ -464,7 +503,11 @@ dependencies = [
  "quote",
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
  "syn 2.0.101",
+=======
+ "syn 2.0.107",
+>>>>>>> Stashed changes
 =======
  "syn 2.0.107",
 >>>>>>> Stashed changes
@@ -477,9 +520,15 @@ dependencies = [
 name = "alloy-rpc-types-any"
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 version = "0.12.6"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "604dea1f00fd646debe8033abe8e767c732868bf8a5ae9df6321909ccbc99c56"
+=======
+version = "1.0.41"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "fbde0801a32d21c5f111f037bee7e22874836fba7add34ed4a6919932dd7cf23"
+>>>>>>> Stashed changes
 =======
 version = "1.0.41"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -500,9 +549,15 @@ dependencies = [
 name = "alloy-rpc-types-eth"
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 version = "0.12.6"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "7e13d71eac04513a71af4b3df580f52f2b4dcbff9d971cc9a52519acf55514cb"
+=======
+version = "1.0.41"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "361cd87ead4ba7659bda8127902eda92d17fa7ceb18aba1676f7be10f7222487"
+>>>>>>> Stashed changes
 =======
 version = "1.0.41"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -532,9 +587,15 @@ dependencies = [
 name = "alloy-serde"
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 version = "0.12.6"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "3a1cd73fc054de6353c7f22ff9b846b0f0f145cd0112da07d4119e41e9959207"
+=======
+version = "1.0.41"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "64600fc6c312b7e0ba76f73a381059af044f4f21f43e07f51f1fa76c868fe302"
+>>>>>>> Stashed changes
 =======
 version = "1.0.41"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -555,9 +616,15 @@ dependencies = [
 name = "alloy-signer"
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 version = "0.12.6"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "c96fbde54bee943cd94ebacc8a62c50b38c7dfd2552dcd79ff61aea778b1bfcc"
+=======
+version = "1.0.41"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "5772858492b26f780468ae693405f895d6a27dea6e3eab2c36b6217de47c2647"
+>>>>>>> Stashed changes
 =======
 version = "1.0.41"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -582,9 +649,15 @@ dependencies = [
 name = "alloy-signer-local"
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 version = "0.12.6"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "cc6e72002cc1801d8b41e9892165e3a6551b7bd382bd9d0414b21e90c0c62551"
+=======
+version = "1.0.41"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "f4195b803d0a992d8dbaab2ca1986fc86533d4bc80967c0cce7668b26ad99ef9"
+>>>>>>> Stashed changes
 =======
 version = "1.0.41"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -619,7 +692,11 @@ dependencies = [
  "quote",
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
  "syn 2.0.101",
+=======
+ "syn 2.0.107",
+>>>>>>> Stashed changes
 =======
  "syn 2.0.107",
 >>>>>>> Stashed changes
@@ -639,11 +716,19 @@ dependencies = [
  "heck 0.5.0",
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
  "indexmap 2.9.0",
  "proc-macro-error2",
  "proc-macro2",
  "quote",
  "syn 2.0.101",
+=======
+ "indexmap 2.12.0",
+ "proc-macro-error2",
+ "proc-macro2",
+ "quote",
+ "syn 2.0.107",
+>>>>>>> Stashed changes
 =======
  "indexmap 2.12.0",
  "proc-macro-error2",
@@ -676,7 +761,11 @@ dependencies = [
  "quote",
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
  "syn 2.0.101",
+=======
+ "syn 2.0.107",
+>>>>>>> Stashed changes
 =======
  "syn 2.0.107",
 >>>>>>> Stashed changes
@@ -728,6 +817,7 @@ dependencies = [
 [[package]]
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 name = "android-tzdata"
 version = "0.1.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -736,6 +826,11 @@ checksum = "e999941b234f3131b00bc13c22d06e8c5ff726d1b6318ac7eb276997bbb4fef0"
 name = "alloy-tx-macros"
 version = "1.0.41"
 source = "registry+https://github.com/rust-lang/crates.io-index"
+=======
+name = "alloy-tx-macros"
+version = "1.0.41"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+>>>>>>> Stashed changes
 =======
 name = "alloy-tx-macros"
 version = "1.0.41"
@@ -1267,7 +1362,11 @@ dependencies = [
  "quote",
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
  "syn 2.0.101",
+=======
+ "syn 2.0.107",
+>>>>>>> Stashed changes
 =======
  "syn 2.0.107",
 >>>>>>> Stashed changes
@@ -1354,7 +1453,11 @@ dependencies = [
  "quote",
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
  "syn 2.0.101",
+=======
+ "syn 2.0.107",
+>>>>>>> Stashed changes
 =======
  "syn 2.0.107",
 >>>>>>> Stashed changes
@@ -1656,8 +1759,12 @@ dependencies = [
  "shlex",
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
  "syn 2.0.101",
  "which 4.4.2",
+=======
+ "syn 2.0.107",
+>>>>>>> Stashed changes
 =======
  "syn 2.0.107",
 >>>>>>> Stashed changes
@@ -1691,12 +1798,17 @@ checksum = "bef38d45163c2f1dde094a7dfd33ccf595c92905c8f8f4fdc18d06fb1037718a"
 name = "bitflags"
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 version = "2.9.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "1b8e56985ec62d17e9c1001dc89c88ecd7dc08e47eba5ec7c29c7b5eeecde967"
 =======
 version = "2.10.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
+=======
+version = "2.10.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+>>>>>>> Stashed changes
 =======
 version = "2.10.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -1799,8 +1911,11 @@ dependencies = [
  "rustversion",
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
  "syn 2.0.101",
 =======
+=======
+>>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
  "syn 2.0.107",
@@ -1878,7 +1993,11 @@ dependencies = [
  "quote",
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
  "syn 2.0.101",
+=======
+ "syn 2.0.107",
+>>>>>>> Stashed changes
 =======
  "syn 2.0.107",
 >>>>>>> Stashed changes
@@ -1977,12 +2096,17 @@ dependencies = [
 name = "cfg-if"
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 version = "1.0.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "baf1de4339761588bc0619e3cbc0120ee582ebb74b53b4efbf79117bd2da40fd"
 =======
 version = "1.0.4"
 source = "registry+https://github.com/rust-lang/crates.io-index"
+=======
+version = "1.0.4"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+>>>>>>> Stashed changes
 =======
 version = "1.0.4"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -2172,6 +2296,7 @@ dependencies = [
 name = "clap"
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 version = "2.34.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "a0610544180c38b88101fecf2dd634b174a62eef6946f84dfc6a7127512b381c"
@@ -2200,6 +2325,11 @@ version = "4.5.50"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "0c2cfd7bf8a6017ddaa4e32ffe7403d547790db06bd171c1c53926faab501623"
 >>>>>>> Stashed changes
+=======
+version = "4.5.50"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "0c2cfd7bf8a6017ddaa4e32ffe7403d547790db06bd171c1c53926faab501623"
+>>>>>>> Stashed changes
 dependencies = [
  "clap_builder",
  "clap_derive",
@@ -2209,9 +2339,15 @@ dependencies = [
 name = "clap_builder"
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 version = "4.5.39"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "89cc6392a1f72bbeb820d71f32108f61fdaf18bc526e1d23954168a67759ef51"
+=======
+version = "4.5.50"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "0a4c05b9e80c5ccd3a7ef080ad7b6ba7d6fc00a985b8b157197075677c82c7a0"
+>>>>>>> Stashed changes
 =======
 version = "4.5.50"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -2240,7 +2376,11 @@ dependencies = [
  "quote",
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
  "syn 2.0.101",
+=======
+ "syn 2.0.107",
+>>>>>>> Stashed changes
 =======
  "syn 2.0.107",
 >>>>>>> Stashed changes
@@ -2617,7 +2757,11 @@ dependencies = [
  "quote",
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
  "syn 2.0.101",
+=======
+ "syn 2.0.107",
+>>>>>>> Stashed changes
 =======
  "syn 2.0.107",
 >>>>>>> Stashed changes
@@ -2673,8 +2817,11 @@ dependencies = [
  "strsim 0.11.1",
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
  "syn 2.0.101",
 =======
+=======
+>>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
  "syn 2.0.107",
@@ -2694,6 +2841,9 @@ dependencies = [
  "strsim 0.11.1",
  "syn 2.0.107",
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
@@ -2720,8 +2870,11 @@ dependencies = [
  "quote",
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
  "syn 2.0.101",
 =======
+=======
+>>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
  "syn 2.0.107",
@@ -2737,6 +2890,9 @@ dependencies = [
  "quote",
  "syn 2.0.107",
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
@@ -2992,6 +3148,9 @@ dependencies = [
  "derive_builder_core 0.20.2",
  "syn 2.0.107",
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
@@ -3027,7 +3186,11 @@ dependencies = [
  "quote",
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
  "syn 2.0.101",
+=======
+ "syn 2.0.107",
+>>>>>>> Stashed changes
 =======
  "syn 2.0.107",
 >>>>>>> Stashed changes
@@ -3074,7 +3237,11 @@ dependencies = [
  "quote",
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
  "syn 2.0.101",
+=======
+ "syn 2.0.107",
+>>>>>>> Stashed changes
 =======
  "syn 2.0.107",
 >>>>>>> Stashed changes
@@ -3199,6 +3366,9 @@ dependencies = [
  "quote",
  "syn 2.0.107",
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
@@ -3215,7 +3385,11 @@ dependencies = [
  "quote",
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
  "syn 2.0.101",
+=======
+ "syn 2.0.107",
+>>>>>>> Stashed changes
 =======
  "syn 2.0.107",
 >>>>>>> Stashed changes
@@ -3477,7 +3651,11 @@ dependencies = [
  "quote",
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
  "syn 2.0.101",
+=======
+ "syn 2.0.107",
+>>>>>>> Stashed changes
 =======
  "syn 2.0.107",
 >>>>>>> Stashed changes
@@ -3561,7 +3739,11 @@ dependencies = [
  "libc",
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
  "wasi 0.11.0+wasi-snapshot-preview1",
+=======
+ "wasi",
+>>>>>>> Stashed changes
 =======
  "wasi",
 >>>>>>> Stashed changes
@@ -3583,7 +3765,11 @@ dependencies = [
  "r-efi",
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
  "wasi 0.14.2+wasi-0.2.4",
+=======
+ "wasip2",
+>>>>>>> Stashed changes
 =======
  "wasip2",
 >>>>>>> Stashed changes
@@ -3690,7 +3876,11 @@ dependencies = [
  "http 1.3.1",
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
  "indexmap 2.9.0",
+=======
+ "indexmap 2.12.0",
+>>>>>>> Stashed changes
 =======
  "indexmap 2.12.0",
 >>>>>>> Stashed changes
@@ -3941,8 +4131,11 @@ dependencies = [
  "hyper-util",
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
  "native-tls",
 =======
+=======
+>>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
  "rustls 0.23.33",
@@ -4133,7 +4326,11 @@ dependencies = [
  "quote",
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
  "syn 2.0.101",
+=======
+ "syn 2.0.107",
+>>>>>>> Stashed changes
 =======
  "syn 2.0.107",
 >>>>>>> Stashed changes
@@ -4163,9 +4360,15 @@ dependencies = [
 name = "indexmap"
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 version = "2.9.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "cea70ddb795996207ad57735b50c5982d8844f38ba9ee5f1aedcfb708a2aa11e"
+=======
+version = "2.12.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "6717a8d2a5a929a1a2eb43a12812498ed141a0bcfb7e8f7844fbdbe4303bba9f"
+>>>>>>> Stashed changes
 =======
 version = "2.12.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -4573,7 +4776,11 @@ dependencies = [
  "quote",
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
  "syn 2.0.101",
+=======
+ "syn 2.0.107",
+>>>>>>> Stashed changes
 =======
  "syn 2.0.107",
 >>>>>>> Stashed changes
@@ -4727,6 +4934,7 @@ dependencies = [
 [[package]]
 name = "mio"
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 version = "0.8.11"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "a4a650543ca06a924e8b371db273b2756685faae30f8487da1b56505a8f78b0c"
@@ -4748,6 +4956,15 @@ dependencies = [
  "wasi 0.11.0+wasi-snapshot-preview1",
  "windows-sys 0.59.0",
 =======
+ "wasi",
+ "windows-sys 0.61.2",
+>>>>>>> Stashed changes
+=======
+version = "1.1.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "69d83b0086dc8ecf3ce9ae2874b2d1290252e2a30720bea58a5c6639b0092873"
+dependencies = [
+ "libc",
  "wasi",
  "windows-sys 0.61.2",
 >>>>>>> Stashed changes
@@ -5532,7 +5749,11 @@ dependencies = [
  "quote",
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
  "syn 2.0.101",
+=======
+ "syn 2.0.107",
+>>>>>>> Stashed changes
 =======
  "syn 2.0.107",
 >>>>>>> Stashed changes
@@ -5646,7 +5867,11 @@ dependencies = [
  "quote",
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
  "syn 2.0.101",
+=======
+ "syn 2.0.107",
+>>>>>>> Stashed changes
 =======
  "syn 2.0.107",
 >>>>>>> Stashed changes
@@ -5740,7 +5965,11 @@ dependencies = [
  "quote",
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
  "syn 2.0.101",
+=======
+ "syn 2.0.107",
+>>>>>>> Stashed changes
 =======
  "syn 2.0.107",
 >>>>>>> Stashed changes
@@ -5904,7 +6133,11 @@ dependencies = [
  "proc-macro2",
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
  "syn 2.0.101",
+=======
+ "syn 2.0.107",
+>>>>>>> Stashed changes
 =======
  "syn 2.0.107",
 >>>>>>> Stashed changes
@@ -5988,8 +6221,11 @@ dependencies = [
  "quote",
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
  "syn 2.0.101",
 =======
+=======
+>>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
  "syn 2.0.107",
@@ -6017,6 +6253,9 @@ dependencies = [
  "quote",
  "syn 2.0.107",
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
@@ -6270,8 +6509,11 @@ checksum = "99d9a13982dcf210057a8a78572b2217b667c3beacbf3a0d8b454f6f82837d38"
 dependencies = [
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
  "getrandom 0.3.3",
 =======
+=======
+>>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
  "getrandom 0.3.4",
@@ -6348,6 +6590,9 @@ dependencies = [
  "quote",
  "syn 2.0.107",
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
@@ -6579,6 +6824,7 @@ checksum = "48fd7bd8a6377e15ad9d42a8ec25371b94ddc67abe7c8b9127bec79bebaaae18"
 [[package]]
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 name = "rust-ini"
 version = "0.20.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -6590,6 +6836,11 @@ dependencies = [
 name = "rust-embed"
 version = "8.8.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
+=======
+name = "rust-embed"
+version = "8.8.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+>>>>>>> Stashed changes
 =======
 name = "rust-embed"
 version = "8.8.0"
@@ -6738,9 +6989,15 @@ dependencies = [
 name = "rustls"
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 version = "0.23.27"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "730944ca083c1c233a75c09f199e973ca499344a2b7ba9e755c457e86fb4a321"
+=======
+version = "0.23.33"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "751e04a496ca00bb97a5e043158d23d66b5aabf2e1d5aa2a0aaebb1aafe6f82c"
+>>>>>>> Stashed changes
 =======
 version = "0.23.33"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -6969,7 +7226,11 @@ dependencies = [
  "quote",
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
  "syn 2.0.101",
+=======
+ "syn 2.0.107",
+>>>>>>> Stashed changes
 =======
  "syn 2.0.107",
 >>>>>>> Stashed changes
@@ -6988,7 +7249,11 @@ dependencies = [
  "quote",
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
  "syn 2.0.101",
+=======
+ "syn 2.0.107",
+>>>>>>> Stashed changes
 =======
  "syn 2.0.107",
 >>>>>>> Stashed changes
@@ -7005,6 +7270,10 @@ checksum = "20068b6e96dc6c9bd23e01df8827e6c7e1f2fddd43c21810382803c136b99373"
 dependencies = [
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+=======
+ "indexmap 2.12.0",
+>>>>>>> Stashed changes
 =======
  "indexmap 2.12.0",
 >>>>>>> Stashed changes
@@ -7060,10 +7329,13 @@ dependencies = [
  "indexmap 1.9.3",
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
  "indexmap 2.9.0",
  "serde",
  "serde_derive",
 =======
+=======
+>>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
  "indexmap 2.12.0",
@@ -7087,6 +7359,7 @@ dependencies = [
  "quote",
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
  "syn 2.0.101",
 ]
 
@@ -7101,6 +7374,9 @@ dependencies = [
  "ryu",
  "serde",
  "unsafe-libyaml",
+=======
+ "syn 2.0.107",
+>>>>>>> Stashed changes
 =======
  "syn 2.0.107",
 >>>>>>> Stashed changes
@@ -7373,8 +7649,12 @@ dependencies = [
  "quote",
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
  "rustversion",
  "syn 2.0.101",
+=======
+ "syn 2.0.107",
+>>>>>>> Stashed changes
 =======
  "syn 2.0.107",
 >>>>>>> Stashed changes
@@ -7404,9 +7684,15 @@ dependencies = [
 name = "syn"
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 version = "2.0.101"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "8ce2b7fc941b3a24138a0a7cf8e858bfc6a992e7978a068a5c760deb0ed43caf"
+=======
+version = "2.0.107"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "2a26dbd934e5451d21ef060c018dae56fc073894c5a7896f882928a76e6d081b"
+>>>>>>> Stashed changes
 =======
 version = "2.0.107"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -7434,7 +7720,11 @@ dependencies = [
  "quote",
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
  "syn 2.0.101",
+=======
+ "syn 2.0.107",
+>>>>>>> Stashed changes
 =======
  "syn 2.0.107",
 >>>>>>> Stashed changes
@@ -7462,8 +7752,11 @@ dependencies = [
  "quote",
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
  "syn 2.0.101",
 =======
+=======
+>>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
  "syn 2.0.107",
@@ -7576,7 +7869,11 @@ dependencies = [
  "quote",
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
  "syn 2.0.101",
+=======
+ "syn 2.0.107",
+>>>>>>> Stashed changes
 =======
  "syn 2.0.107",
 >>>>>>> Stashed changes
@@ -7595,7 +7892,11 @@ dependencies = [
  "quote",
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
  "syn 2.0.101",
+=======
+ "syn 2.0.107",
+>>>>>>> Stashed changes
 =======
  "syn 2.0.107",
 >>>>>>> Stashed changes
@@ -8257,6 +8558,7 @@ dependencies = [
  "quote",
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
  "syn 2.0.101",
 ]
 
@@ -8274,6 +8576,9 @@ dependencies = [
 =======
  "syn 2.0.107",
 >>>>>>> Stashed changes
+=======
+ "syn 2.0.107",
+>>>>>>> Stashed changes
 ]
 
 [[package]]
@@ -8284,7 +8589,11 @@ checksum = "c28327cf380ac148141087fbfb9de9d7bd4e84ab5d2c28fbc911d753de8a7081"
 dependencies = [
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
  "rustls 0.21.12",
+=======
+ "rustls 0.23.33",
+>>>>>>> Stashed changes
 =======
  "rustls 0.23.33",
 >>>>>>> Stashed changes
@@ -8361,6 +8670,7 @@ checksum = "310068873db2c5b3e7659d2cc35d21855dbafa50d1ce336397c666e3cb08137e"
 dependencies = [
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
  "indexmap 2.9.0",
  "serde",
  "serde_spanned",
@@ -8368,6 +8678,8 @@ dependencies = [
  "toml_write",
  "winnow",
 =======
+=======
+>>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
  "indexmap 2.12.0",
@@ -8525,7 +8837,11 @@ dependencies = [
  "quote",
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
  "syn 2.0.101",
+=======
+ "syn 2.0.107",
+>>>>>>> Stashed changes
 =======
  "syn 2.0.107",
 >>>>>>> Stashed changes
@@ -8629,7 +8945,11 @@ dependencies = [
  "serde_derive_internals",
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
  "syn 2.0.101",
+=======
+ "syn 2.0.107",
+>>>>>>> Stashed changes
 =======
  "syn 2.0.107",
 >>>>>>> Stashed changes
@@ -8940,6 +9260,7 @@ checksum = "9c8d87e72b64a3b4db28d11ce29237c246188f4f51057d65a7eab63b7987e423"
 [[package]]
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 name = "wasi"
 version = "0.14.2+wasi-0.2.4"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -8947,6 +9268,8 @@ checksum = "9683f9a5a998d873c0d21fcbe3c083009670149a8fab228644b8bd36b2c48cb3"
 dependencies = [
  "wit-bindgen-rt",
 =======
+=======
+>>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
 name = "wasip2"
@@ -8982,7 +9305,11 @@ dependencies = [
  "quote",
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
  "syn 2.0.101",
+=======
+ "syn 2.0.107",
+>>>>>>> Stashed changes
 =======
  "syn 2.0.107",
 >>>>>>> Stashed changes
@@ -9025,7 +9352,11 @@ dependencies = [
  "quote",
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
  "syn 2.0.101",
+=======
+ "syn 2.0.107",
+>>>>>>> Stashed changes
 =======
  "syn 2.0.107",
 >>>>>>> Stashed changes
@@ -9210,7 +9541,11 @@ dependencies = [
  "quote",
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
  "syn 2.0.101",
+=======
+ "syn 2.0.107",
+>>>>>>> Stashed changes
 =======
  "syn 2.0.107",
 >>>>>>> Stashed changes
@@ -9229,7 +9564,11 @@ dependencies = [
  "quote",
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
  "syn 2.0.101",
+=======
+ "syn 2.0.107",
+>>>>>>> Stashed changes
 =======
  "syn 2.0.107",
 >>>>>>> Stashed changes
@@ -9616,7 +9955,11 @@ dependencies = [
  "quote",
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
  "syn 2.0.101",
+=======
+ "syn 2.0.107",
+>>>>>>> Stashed changes
 =======
  "syn 2.0.107",
 >>>>>>> Stashed changes
@@ -9645,7 +9988,11 @@ dependencies = [
  "quote",
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
  "syn 2.0.101",
+=======
+ "syn 2.0.107",
+>>>>>>> Stashed changes
 =======
  "syn 2.0.107",
 >>>>>>> Stashed changes
@@ -9673,7 +10020,11 @@ dependencies = [
  "quote",
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
  "syn 2.0.101",
+=======
+ "syn 2.0.107",
+>>>>>>> Stashed changes
 =======
  "syn 2.0.107",
 >>>>>>> Stashed changes
@@ -9702,7 +10053,11 @@ dependencies = [
  "quote",
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
  "syn 2.0.101",
+=======
+ "syn 2.0.107",
+>>>>>>> Stashed changes
 =======
  "syn 2.0.107",
 >>>>>>> Stashed changes
@@ -9743,8 +10098,11 @@ dependencies = [
  "quote",
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
  "syn 2.0.101",
 =======
+=======
+>>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
  "syn 2.0.107",

@@ -60,8 +60,7 @@ cargo build --bin notary-server --release
 This oracle uses **SECP256K1ETH** signatures (ECDSA with Keccak-256 hashing):
 
 ```bash
-NS_NOTARIZATION__SIGNATURE_ALGORITHM=secp256k1eth \
-    target/release/notary-server
+NS_NOTARIZATION__SIGNATURE_ALGORITHM=secp256k1eth cargo run --release --bin notary-server
 ```
 
 You should see:

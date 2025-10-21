@@ -3,80 +3,6 @@
 version = 4
 
 [[package]]
-<<<<<<< Updated upstream
-=======
-name = "acir"
-version = "1.0.0-beta.8"
-source = "git+https://github.com/noir-lang/noir.git?rev=b33131574388d836341cea9b6380f3b1a8493eb8#b33131574388d836341cea9b6380f3b1a8493eb8"
-dependencies = [
- "acir_field",
- "base64 0.22.1",
- "bincode 2.0.1",
- "brillig",
- "color-eyre",
- "flate2",
- "noir_protobuf",
- "num_enum",
- "prost",
- "prost-build",
- "protoc-prebuilt",
- "rmp-serde",
- "serde",
- "serde-big-array",
- "strum 0.24.1",
- "strum_macros 0.24.3",
- "thiserror 1.0.69",
-]
-
-[[package]]
-name = "acir_field"
-version = "1.0.0-beta.8"
-source = "git+https://github.com/noir-lang/noir.git?rev=b33131574388d836341cea9b6380f3b1a8493eb8#b33131574388d836341cea9b6380f3b1a8493eb8"
-dependencies = [
- "ark-bn254",
- "ark-ff 0.5.0",
- "ark-std 0.5.0",
- "cfg-if",
- "hex",
- "num-bigint",
- "serde",
-]
-
-[[package]]
-name = "acvm"
-version = "1.0.0-beta.8"
-source = "git+https://github.com/noir-lang/noir.git?rev=b33131574388d836341cea9b6380f3b1a8493eb8#b33131574388d836341cea9b6380f3b1a8493eb8"
-dependencies = [
- "acir",
- "acvm_blackbox_solver",
- "brillig_vm",
- "fxhash",
- "indexmap 2.12.0",
- "serde",
- "thiserror 1.0.69",
- "tracing",
-]
-
-[[package]]
-name = "acvm_blackbox_solver"
-version = "1.0.0-beta.8"
-source = "git+https://github.com/noir-lang/noir.git?rev=b33131574388d836341cea9b6380f3b1a8493eb8#b33131574388d836341cea9b6380f3b1a8493eb8"
-dependencies = [
- "acir",
- "blake2",
- "blake3",
- "k256",
- "keccak",
- "libaes",
- "log",
- "num-bigint",
- "p256",
- "sha2",
- "thiserror 1.0.69",
-]
-
-[[package]]
->>>>>>> Stashed changes
 name = "addr2line"
 version = "0.24.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -177,27 +103,9 @@ checksum = "683d7910e743518b0e34f1186f92494becacb047c7b6bf616c96772180fef923"
 
 [[package]]
 name = "alloy-consensus"
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
 version = "0.12.6"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "6fbf458101ed6c389e9bb70a34ebc56039868ad10472540614816cdedc8f5265"
-=======
-version = "1.0.41"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "b9b151e38e42f1586a01369ec52a6934702731d07e8509a7307331b09f6c46dc"
->>>>>>> Stashed changes
-=======
-version = "1.0.41"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "b9b151e38e42f1586a01369ec52a6934702731d07e8509a7307331b09f6c46dc"
->>>>>>> Stashed changes
-=======
-version = "1.0.41"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "b9b151e38e42f1586a01369ec52a6934702731d07e8509a7307331b09f6c46dc"
->>>>>>> Stashed changes
 dependencies = [
  "alloy-eips",
  "alloy-primitives",
@@ -218,27 +126,9 @@ dependencies = [
 
 [[package]]
 name = "alloy-consensus-any"
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
 version = "0.12.6"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "fc982af629e511292310fe85b433427fd38cb3105147632b574abc997db44c91"
-=======
-version = "1.0.41"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "6e2d5e8668ef6215efdb7dcca6f22277b4e483a5650e05f5de22b2350971f4b8"
->>>>>>> Stashed changes
-=======
-version = "1.0.41"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "6e2d5e8668ef6215efdb7dcca6f22277b4e483a5650e05f5de22b2350971f4b8"
->>>>>>> Stashed changes
-=======
-version = "1.0.41"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "6e2d5e8668ef6215efdb7dcca6f22277b4e483a5650e05f5de22b2350971f4b8"
->>>>>>> Stashed changes
 dependencies = [
  "alloy-consensus",
  "alloy-eips",
@@ -286,27 +176,9 @@ dependencies = [
 
 [[package]]
 name = "alloy-eips"
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
 version = "0.12.6"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "6e86967eb559920e4b9102e4cb825fe30f2e9467988353ce4809f0d3f2c90cd4"
-=======
-version = "1.0.41"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "e5434834adaf64fa20a6fb90877bc1d33214c41b055cc49f82189c98614368cc"
->>>>>>> Stashed changes
-=======
-version = "1.0.41"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "e5434834adaf64fa20a6fb90877bc1d33214c41b055cc49f82189c98614368cc"
->>>>>>> Stashed changes
-=======
-version = "1.0.41"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "e5434834adaf64fa20a6fb90877bc1d33214c41b055cc49f82189c98614368cc"
->>>>>>> Stashed changes
 dependencies = [
  "alloy-eip2124",
  "alloy-eip2930",
@@ -337,27 +209,9 @@ dependencies = [
 
 [[package]]
 name = "alloy-json-rpc"
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
 version = "0.12.6"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "27434beae2514d4a2aa90f53832cbdf6f23e4b5e2656d95eaf15f9276e2418b6"
-=======
-version = "1.0.41"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "d7c69f6c9c68a1287c9d5ff903d0010726934de0dac10989be37b75a29190d55"
->>>>>>> Stashed changes
-=======
-version = "1.0.41"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "d7c69f6c9c68a1287c9d5ff903d0010726934de0dac10989be37b75a29190d55"
->>>>>>> Stashed changes
-=======
-version = "1.0.41"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "d7c69f6c9c68a1287c9d5ff903d0010726934de0dac10989be37b75a29190d55"
->>>>>>> Stashed changes
 dependencies = [
  "alloy-primitives",
  "alloy-sol-types",
@@ -369,27 +223,9 @@ dependencies = [
 
 [[package]]
 name = "alloy-network"
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
 version = "0.12.6"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "26a33a38c7486b1945f8d093ff027add2f3a8f83c7300dbad6165cc49150085e"
-=======
-version = "1.0.41"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "8eaf2ae05219e73e0979cb2cf55612aafbab191d130f203079805eaf881cca58"
->>>>>>> Stashed changes
-=======
-version = "1.0.41"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "8eaf2ae05219e73e0979cb2cf55612aafbab191d130f203079805eaf881cca58"
->>>>>>> Stashed changes
-=======
-version = "1.0.41"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "8eaf2ae05219e73e0979cb2cf55612aafbab191d130f203079805eaf881cca58"
->>>>>>> Stashed changes
 dependencies = [
  "alloy-consensus",
  "alloy-consensus-any",
@@ -413,27 +249,9 @@ dependencies = [
 
 [[package]]
 name = "alloy-network-primitives"
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
 version = "0.12.6"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "db973a7a23cbe96f2958e5687c51ce2d304b5c6d0dc5ccb3de8667ad8476f50b"
-=======
-version = "1.0.41"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "e58f4f345cef483eab7374f2b6056973c7419ffe8ad35e994b7a7f5d8e0c7ba4"
->>>>>>> Stashed changes
-=======
-version = "1.0.41"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "e58f4f345cef483eab7374f2b6056973c7419ffe8ad35e994b7a7f5d8e0c7ba4"
->>>>>>> Stashed changes
-=======
-version = "1.0.41"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "e58f4f345cef483eab7374f2b6056973c7419ffe8ad35e994b7a7f5d8e0c7ba4"
->>>>>>> Stashed changes
 dependencies = [
  "alloy-consensus",
  "alloy-eips",
@@ -452,23 +270,10 @@ dependencies = [
  "bytes",
  "cfg-if",
  "const-hex",
-<<<<<<< Updated upstream
  "derive_more 2.0.1",
  "foldhash",
  "hashbrown 0.15.3",
  "indexmap 2.9.0",
-=======
- "derive_more",
- "foldhash 0.2.0",
- "hashbrown 0.16.0",
- "indexmap 2.12.0",
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
  "itoa",
  "k256",
  "keccak-asm",
@@ -501,44 +306,14 @@ checksum = "64b728d511962dda67c1bc7ea7c03736ec275ed2cf4c35d9585298ac9ccf3b73"
 dependencies = [
  "proc-macro2",
  "quote",
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
  "syn 2.0.101",
-=======
- "syn 2.0.107",
->>>>>>> Stashed changes
-=======
- "syn 2.0.107",
->>>>>>> Stashed changes
-=======
- "syn 2.0.107",
->>>>>>> Stashed changes
 ]
 
 [[package]]
 name = "alloy-rpc-types-any"
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
 version = "0.12.6"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "604dea1f00fd646debe8033abe8e767c732868bf8a5ae9df6321909ccbc99c56"
-=======
-version = "1.0.41"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "fbde0801a32d21c5f111f037bee7e22874836fba7add34ed4a6919932dd7cf23"
->>>>>>> Stashed changes
-=======
-version = "1.0.41"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "fbde0801a32d21c5f111f037bee7e22874836fba7add34ed4a6919932dd7cf23"
->>>>>>> Stashed changes
-=======
-version = "1.0.41"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "fbde0801a32d21c5f111f037bee7e22874836fba7add34ed4a6919932dd7cf23"
->>>>>>> Stashed changes
 dependencies = [
  "alloy-consensus-any",
  "alloy-rpc-types-eth",
@@ -547,27 +322,9 @@ dependencies = [
 
 [[package]]
 name = "alloy-rpc-types-eth"
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
 version = "0.12.6"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "7e13d71eac04513a71af4b3df580f52f2b4dcbff9d971cc9a52519acf55514cb"
-=======
-version = "1.0.41"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "361cd87ead4ba7659bda8127902eda92d17fa7ceb18aba1676f7be10f7222487"
->>>>>>> Stashed changes
-=======
-version = "1.0.41"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "361cd87ead4ba7659bda8127902eda92d17fa7ceb18aba1676f7be10f7222487"
->>>>>>> Stashed changes
-=======
-version = "1.0.41"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "361cd87ead4ba7659bda8127902eda92d17fa7ceb18aba1676f7be10f7222487"
->>>>>>> Stashed changes
 dependencies = [
  "alloy-consensus",
  "alloy-consensus-any",
@@ -585,27 +342,9 @@ dependencies = [
 
 [[package]]
 name = "alloy-serde"
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
 version = "0.12.6"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "3a1cd73fc054de6353c7f22ff9b846b0f0f145cd0112da07d4119e41e9959207"
-=======
-version = "1.0.41"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "64600fc6c312b7e0ba76f73a381059af044f4f21f43e07f51f1fa76c868fe302"
->>>>>>> Stashed changes
-=======
-version = "1.0.41"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "64600fc6c312b7e0ba76f73a381059af044f4f21f43e07f51f1fa76c868fe302"
->>>>>>> Stashed changes
-=======
-version = "1.0.41"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "64600fc6c312b7e0ba76f73a381059af044f4f21f43e07f51f1fa76c868fe302"
->>>>>>> Stashed changes
 dependencies = [
  "alloy-primitives",
  "serde",
@@ -614,27 +353,9 @@ dependencies = [
 
 [[package]]
 name = "alloy-signer"
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
 version = "0.12.6"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "c96fbde54bee943cd94ebacc8a62c50b38c7dfd2552dcd79ff61aea778b1bfcc"
-=======
-version = "1.0.41"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "5772858492b26f780468ae693405f895d6a27dea6e3eab2c36b6217de47c2647"
->>>>>>> Stashed changes
-=======
-version = "1.0.41"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "5772858492b26f780468ae693405f895d6a27dea6e3eab2c36b6217de47c2647"
->>>>>>> Stashed changes
-=======
-version = "1.0.41"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "5772858492b26f780468ae693405f895d6a27dea6e3eab2c36b6217de47c2647"
->>>>>>> Stashed changes
 dependencies = [
  "alloy-primitives",
  "async-trait",
@@ -647,27 +368,9 @@ dependencies = [
 
 [[package]]
 name = "alloy-signer-local"
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
 version = "0.12.6"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "cc6e72002cc1801d8b41e9892165e3a6551b7bd382bd9d0414b21e90c0c62551"
-=======
-version = "1.0.41"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "f4195b803d0a992d8dbaab2ca1986fc86533d4bc80967c0cce7668b26ad99ef9"
->>>>>>> Stashed changes
-=======
-version = "1.0.41"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "f4195b803d0a992d8dbaab2ca1986fc86533d4bc80967c0cce7668b26ad99ef9"
->>>>>>> Stashed changes
-=======
-version = "1.0.41"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "f4195b803d0a992d8dbaab2ca1986fc86533d4bc80967c0cce7668b26ad99ef9"
->>>>>>> Stashed changes
 dependencies = [
  "alloy-consensus",
  "alloy-network",
@@ -690,19 +393,7 @@ dependencies = [
  "proc-macro-error2",
  "proc-macro2",
  "quote",
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
  "syn 2.0.101",
-=======
- "syn 2.0.107",
->>>>>>> Stashed changes
-=======
- "syn 2.0.107",
->>>>>>> Stashed changes
-=======
- "syn 2.0.107",
->>>>>>> Stashed changes
 ]
 
 [[package]]
@@ -714,35 +405,11 @@ dependencies = [
  "alloy-sol-macro-input",
  "const-hex",
  "heck 0.5.0",
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
  "indexmap 2.9.0",
  "proc-macro-error2",
  "proc-macro2",
  "quote",
  "syn 2.0.101",
-=======
- "indexmap 2.12.0",
- "proc-macro-error2",
- "proc-macro2",
- "quote",
- "syn 2.0.107",
->>>>>>> Stashed changes
-=======
- "indexmap 2.12.0",
- "proc-macro-error2",
- "proc-macro2",
- "quote",
- "syn 2.0.107",
->>>>>>> Stashed changes
-=======
- "indexmap 2.12.0",
- "proc-macro-error2",
- "proc-macro2",
- "quote",
- "syn 2.0.107",
->>>>>>> Stashed changes
  "syn-solidity",
  "tiny-keccak",
 ]
@@ -759,19 +426,7 @@ dependencies = [
  "macro-string",
  "proc-macro2",
  "quote",
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
  "syn 2.0.101",
-=======
- "syn 2.0.107",
->>>>>>> Stashed changes
-=======
- "syn 2.0.107",
->>>>>>> Stashed changes
-=======
- "syn 2.0.107",
->>>>>>> Stashed changes
  "syn-solidity",
 ]
 
@@ -815,36 +470,10 @@ dependencies = [
 ]
 
 [[package]]
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
 name = "android-tzdata"
 version = "0.1.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "e999941b234f3131b00bc13c22d06e8c5ff726d1b6318ac7eb276997bbb4fef0"
-=======
-name = "alloy-tx-macros"
-version = "1.0.41"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-=======
-name = "alloy-tx-macros"
-version = "1.0.41"
-source = "registry+https://github.com/rust-lang/crates.io-index"
->>>>>>> Stashed changes
-=======
-name = "alloy-tx-macros"
-version = "1.0.41"
-source = "registry+https://github.com/rust-lang/crates.io-index"
->>>>>>> Stashed changes
-checksum = "f8e52276fdb553d3c11563afad2898f4085165e4093604afe3d78b69afbf408f"
-dependencies = [
- "alloy-primitives",
- "darling 0.21.3",
- "proc-macro2",
- "quote",
- "syn 2.0.107",
-]
->>>>>>> Stashed changes
 
 [[package]]
 name = "android_system_properties"
@@ -1002,19 +631,6 @@ dependencies = [
 ]
 
 [[package]]
-<<<<<<< Updated upstream
-=======
-name = "ark-ff-asm"
-version = "0.5.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "62945a2f7e6de02a31fe400aa489f0e0f5b2502e69f95f853adb82a96c7a6b60"
-dependencies = [
- "quote",
- "syn 2.0.107",
-]
-
-[[package]]
->>>>>>> Stashed changes
 name = "ark-ff-macros"
 version = "0.3.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -1040,34 +656,6 @@ dependencies = [
 ]
 
 [[package]]
-<<<<<<< Updated upstream
-=======
-name = "ark-ff-macros"
-version = "0.5.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "09be120733ee33f7693ceaa202ca41accd5653b779563608f1234f78ae07c4b3"
-dependencies = [
- "num-bigint",
- "num-traits",
- "proc-macro2",
- "quote",
- "syn 2.0.107",
-]
-
-[[package]]
-name = "ark-grumpkin"
-version = "0.5.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "ef677b59f5aff4123207c4dceb1c0ec8fdde2d4af7886f48be42ad864bfa0352"
-dependencies = [
- "ark-bn254",
- "ark-ec 0.5.0",
- "ark-ff 0.5.0",
- "ark-std 0.5.0",
-]
-
-[[package]]
->>>>>>> Stashed changes
 name = "ark-poly"
 version = "0.4.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -1125,20 +713,6 @@ dependencies = [
 ]
 
 [[package]]
-<<<<<<< Updated upstream
-=======
-name = "ark-serialize-derive"
-version = "0.5.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "213888f660fddcca0d257e88e54ac05bca01885f258ccdf695bafd77031bb69d"
-dependencies = [
- "proc-macro2",
- "quote",
- "syn 2.0.107",
-]
-
-[[package]]
->>>>>>> Stashed changes
 name = "ark-std"
 version = "0.3.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -1360,19 +934,7 @@ checksum = "e539d3fca749fcee5236ab05e93a52867dd549cc157c8cb7f99595f3cedffdb5"
 dependencies = [
  "proc-macro2",
  "quote",
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
  "syn 2.0.101",
-=======
- "syn 2.0.107",
->>>>>>> Stashed changes
-=======
- "syn 2.0.107",
->>>>>>> Stashed changes
-=======
- "syn 2.0.107",
->>>>>>> Stashed changes
 ]
 
 [[package]]
@@ -1451,19 +1013,7 @@ checksum = "ffdcb70bdbc4d478427380519163274ac86e52916e10f0a8889adf0f96d3fee7"
 dependencies = [
  "proc-macro2",
  "quote",
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
  "syn 2.0.101",
-=======
- "syn 2.0.107",
->>>>>>> Stashed changes
-=======
- "syn 2.0.107",
->>>>>>> Stashed changes
-=======
- "syn 2.0.107",
->>>>>>> Stashed changes
 ]
 
 [[package]]
@@ -1757,20 +1307,8 @@ dependencies = [
  "regex",
  "rustc-hash 1.1.0",
  "shlex",
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
  "syn 2.0.101",
  "which 4.4.2",
-=======
- "syn 2.0.107",
->>>>>>> Stashed changes
-=======
- "syn 2.0.107",
->>>>>>> Stashed changes
-=======
- "syn 2.0.107",
->>>>>>> Stashed changes
 ]
 
 [[package]]
@@ -1796,31 +1334,9 @@ checksum = "bef38d45163c2f1dde094a7dfd33ccf595c92905c8f8f4fdc18d06fb1037718a"
 
 [[package]]
 name = "bitflags"
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
 version = "2.9.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "1b8e56985ec62d17e9c1001dc89c88ecd7dc08e47eba5ec7c29c7b5eeecde967"
-=======
-version = "2.10.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-=======
-version = "2.10.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
->>>>>>> Stashed changes
-=======
-version = "2.10.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
->>>>>>> Stashed changes
-checksum = "812e12b5285cc515a9c72a5c1d3b6d46a19dac5acfef5265968c166106e31dd3"
-
-[[package]]
-name = "bitmaps"
-version = "2.1.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "031043d04099746d8db04daf1fa424b2bc8bd69d92b25962dcde24da39ab64a2"
->>>>>>> Stashed changes
 dependencies = [
  "serde",
 ]
@@ -1909,57 +1425,7 @@ dependencies = [
  "proc-macro2",
  "quote",
  "rustversion",
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
  "syn 2.0.101",
-=======
-=======
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
- "syn 2.0.107",
-]
-
-[[package]]
-name = "borsh"
-version = "1.5.7"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "ad8646f98db542e39fc66e68a20b2144f6a732636df7c2354e74645faaa433ce"
-dependencies = [
- "cfg_aliases",
-]
-
-[[package]]
-name = "brillig"
-version = "1.0.0-beta.8"
-source = "git+https://github.com/noir-lang/noir.git?rev=b33131574388d836341cea9b6380f3b1a8493eb8#b33131574388d836341cea9b6380f3b1a8493eb8"
-dependencies = [
- "acir_field",
- "serde",
-]
-
-[[package]]
-name = "brillig_vm"
-version = "1.0.0-beta.8"
-source = "git+https://github.com/noir-lang/noir.git?rev=b33131574388d836341cea9b6380f3b1a8493eb8#b33131574388d836341cea9b6380f3b1a8493eb8"
-dependencies = [
- "acir",
- "acvm_blackbox_solver",
- "num-bigint",
- "num-traits",
- "thiserror 1.0.69",
-]
-
-[[package]]
-name = "build-data"
-version = "0.3.3"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "22e6d5ca7a4989b90a9fafea85ce3c8bc9f0e0a76edcdcb330fe0c4fda92251f"
-dependencies = [
- "chrono",
- "safe-regex",
->>>>>>> Stashed changes
 ]
 
 [[package]]
@@ -1991,19 +1457,7 @@ checksum = "7ecc273b49b3205b83d648f0690daa588925572cc5063745bfe547fe7ec8e1a1"
 dependencies = [
  "proc-macro2",
  "quote",
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
  "syn 2.0.101",
-=======
- "syn 2.0.107",
->>>>>>> Stashed changes
-=======
- "syn 2.0.107",
->>>>>>> Stashed changes
-=======
- "syn 2.0.107",
->>>>>>> Stashed changes
 ]
 
 [[package]]
@@ -2046,25 +1500,7 @@ dependencies = [
 name = "cargo-emit"
 version = "0.2.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-<<<<<<< Updated upstream
 checksum = "1582e1c9e755dd6ad6b224dcffb135d199399a4568d454bd89fe515ca8425695"
-=======
-checksum = "8f2d24a6dcf0cd402a21b65d35340f3a49ff3475dc5fdac91d22d2733e6641c6"
-dependencies = [
- "capacity_builder_macros",
- "itoa",
-]
-
-[[package]]
-name = "capacity_builder_macros"
-version = "0.3.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "3b4a6cae9efc04cc6cbb8faf338d2c497c165c83e74509cf4dbedea948bbf6e5"
-dependencies = [
- "quote",
- "syn 2.0.107",
-]
->>>>>>> Stashed changes
 
 [[package]]
 name = "cast"
@@ -2094,54 +1530,9 @@ dependencies = [
 
 [[package]]
 name = "cfg-if"
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
 version = "1.0.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "baf1de4339761588bc0619e3cbc0120ee582ebb74b53b4efbf79117bd2da40fd"
-=======
-version = "1.0.4"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-=======
-version = "1.0.4"
-source = "registry+https://github.com/rust-lang/crates.io-index"
->>>>>>> Stashed changes
-=======
-version = "1.0.4"
-source = "registry+https://github.com/rust-lang/crates.io-index"
->>>>>>> Stashed changes
-checksum = "9330f8b2ff13f34540b44e946ef35111825727b38d33286ef986142615121801"
-
-[[package]]
-name = "cfg_aliases"
-version = "0.2.1"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "613afe47fcd5fac7ccf1db93babcb082c5994d996f20b8b159f2ad1658eb5724"
-
-[[package]]
-name = "charming"
-version = "0.5.1"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "73ffae2e616ae7d66b2e9ea369f1c7650042bdcdc1dc08b04b027107007b4f09"
-dependencies = [
- "deno_core",
- "handlebars",
- "serde",
- "serde_json",
- "serde_v8",
- "serde_with",
-]
-
-[[package]]
-name = "chkstk_stub"
-version = "0.1.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "047f6ab2f3b9bcaf23b593d1580898e4244d27eadf1a1fae99212ee5735d3d1c"
-dependencies = [
- "cc",
-]
->>>>>>> Stashed changes
 
 [[package]]
 name = "chromiumoxide"
@@ -2294,9 +1685,6 @@ dependencies = [
 
 [[package]]
 name = "clap"
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
 version = "2.34.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "a0610544180c38b88101fecf2dd634b174a62eef6946f84dfc6a7127512b381c"
@@ -2315,21 +1703,6 @@ name = "clap"
 version = "4.5.39"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "fd60e63e9be68e5fb56422e397cf9baddded06dae1d2e523401542383bc72a9f"
-=======
-version = "4.5.50"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "0c2cfd7bf8a6017ddaa4e32ffe7403d547790db06bd171c1c53926faab501623"
->>>>>>> Stashed changes
-=======
-version = "4.5.50"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "0c2cfd7bf8a6017ddaa4e32ffe7403d547790db06bd171c1c53926faab501623"
->>>>>>> Stashed changes
-=======
-version = "4.5.50"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "0c2cfd7bf8a6017ddaa4e32ffe7403d547790db06bd171c1c53926faab501623"
->>>>>>> Stashed changes
 dependencies = [
  "clap_builder",
  "clap_derive",
@@ -2337,27 +1710,9 @@ dependencies = [
 
 [[package]]
 name = "clap_builder"
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
 version = "4.5.39"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "89cc6392a1f72bbeb820d71f32108f61fdaf18bc526e1d23954168a67759ef51"
-=======
-version = "4.5.50"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "0a4c05b9e80c5ccd3a7ef080ad7b6ba7d6fc00a985b8b157197075677c82c7a0"
->>>>>>> Stashed changes
-=======
-version = "4.5.50"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "0a4c05b9e80c5ccd3a7ef080ad7b6ba7d6fc00a985b8b157197075677c82c7a0"
->>>>>>> Stashed changes
-=======
-version = "4.5.50"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "0a4c05b9e80c5ccd3a7ef080ad7b6ba7d6fc00a985b8b157197075677c82c7a0"
->>>>>>> Stashed changes
 dependencies = [
  "anstream",
  "anstyle",
@@ -2374,19 +1729,7 @@ dependencies = [
  "heck 0.5.0",
  "proc-macro2",
  "quote",
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
  "syn 2.0.101",
-=======
- "syn 2.0.107",
->>>>>>> Stashed changes
-=======
- "syn 2.0.107",
->>>>>>> Stashed changes
-=======
- "syn 2.0.107",
->>>>>>> Stashed changes
 ]
 
 [[package]]
@@ -2693,21 +2036,21 @@ dependencies = [
 
 [[package]]
 name = "csv"
-version = "1.4.0"
+version = "1.3.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "52cd9d68cf7efc6ddfaaee42e7288d3a99d613d4b50f76ce9827ae0c6e14f938"
+checksum = "acdc4883a9c96732e4733212c01447ebd805833b7275a73ca3ee080fd77afdaf"
 dependencies = [
  "csv-core",
  "itoa",
  "ryu",
- "serde_core",
+ "serde",
 ]
 
 [[package]]
 name = "csv-core"
-version = "0.1.13"
+version = "0.1.12"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "704a3c26996a80471189265814dbc2c257598b96b8a7feae2d31ace646bb9782"
+checksum = "7d02f3b0da4c6504f86e9cd789d8dbafab48c2321be74e9987593de5a894d93d"
 dependencies = [
  "memchr",
 ]
@@ -2755,19 +2098,7 @@ checksum = "f46882e17999c6cc590af592290432be3bce0428cb0d5f8b6715e4dc7b383eb3"
 dependencies = [
  "proc-macro2",
  "quote",
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
  "syn 2.0.101",
-=======
- "syn 2.0.107",
->>>>>>> Stashed changes
-=======
- "syn 2.0.107",
->>>>>>> Stashed changes
-=======
- "syn 2.0.107",
->>>>>>> Stashed changes
 ]
 
 [[package]]
@@ -2815,38 +2146,7 @@ dependencies = [
  "proc-macro2",
  "quote",
  "strsim 0.11.1",
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
  "syn 2.0.101",
-=======
-=======
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
- "syn 2.0.107",
-]
-
-[[package]]
-name = "darling_core"
-version = "0.21.3"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "1247195ecd7e3c85f83c8d2a366e4210d588e802133e1e355180a9870b517ea4"
-dependencies = [
- "fnv",
- "ident_case",
- "proc-macro2",
- "quote",
- "serde",
- "strsim 0.11.1",
- "syn 2.0.107",
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
 ]
 
 [[package]]
@@ -2868,34 +2168,7 @@ checksum = "fc34b93ccb385b40dc71c6fceac4b2ad23662c7eeb248cf10d529b7e055b6ead"
 dependencies = [
  "darling_core 0.20.11",
  "quote",
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
  "syn 2.0.101",
-=======
-=======
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
- "syn 2.0.107",
-]
-
-[[package]]
-name = "darling_macro"
-version = "0.21.3"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "d38308df82d1080de0afee5d069fa14b0326a88c14f15c5ccda35b4a6c414c81"
-dependencies = [
- "darling_core 0.21.3",
- "quote",
- "syn 2.0.107",
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
 ]
 
 [[package]]
@@ -2905,129 +2178,6 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "2a2330da5de22e8a3cb63252ce2abb30116bf5265e89c0e01bc17015ce30a476"
 
 [[package]]
-<<<<<<< Updated upstream
-=======
-name = "debugid"
-version = "0.8.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "bef552e6f588e446098f6ba40d89ac146c8c7b64aade83c051ee00bb5d2bc18d"
-dependencies = [
- "serde",
- "uuid",
-]
-
-[[package]]
-name = "deno_core"
-version = "0.348.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "7902cd1dde9e8ffc953428933f37f9b943dc123265709220cded6277946cadf7"
-dependencies = [
- "anyhow",
- "az",
- "bincode 1.3.3",
- "bit-set",
- "bit-vec",
- "bytes",
- "capacity_builder",
- "cooked-waker",
- "deno_core_icudata",
- "deno_error",
- "deno_ops",
- "deno_path_util",
- "deno_unsync",
- "futures",
- "indexmap 2.12.0",
- "libc",
- "parking_lot",
- "percent-encoding",
- "pin-project",
- "serde",
- "serde_json",
- "serde_v8",
- "smallvec",
- "sourcemap",
- "static_assertions",
- "thiserror 2.0.17",
- "tokio",
- "url",
- "v8",
- "wasm_dep_analyzer",
-]
-
-[[package]]
-name = "deno_core_icudata"
-version = "0.74.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "fe4dccb6147bb3f3ba0c7a48e993bfeb999d2c2e47a81badee80e2b370c8d695"
-
-[[package]]
-name = "deno_error"
-version = "0.5.7"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "e983933fb4958fbe1e0a63c1e89a2af72b12c409e86404e547955564e6e217b8"
-dependencies = [
- "deno_error_macro",
- "libc",
- "serde",
- "serde_json",
- "tokio",
- "url",
-]
-
-[[package]]
-name = "deno_error_macro"
-version = "0.5.7"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "a1ad5ae3ef15db33e917d6ed54b53d0a98d068c4d1217eb35a4997423203c3ef"
-dependencies = [
- "proc-macro2",
- "quote",
- "syn 2.0.107",
-]
-
-[[package]]
-name = "deno_ops"
-version = "0.224.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "55db7994eccbdad457ca5091c545af712234c8f6e4389cadb2a24d2ecbbe7e89"
-dependencies = [
- "indexmap 2.12.0",
- "proc-macro-rules",
- "proc-macro2",
- "quote",
- "stringcase",
- "strum 0.27.2",
- "strum_macros 0.27.2",
- "syn 2.0.107",
- "thiserror 2.0.17",
-]
-
-[[package]]
-name = "deno_path_util"
-version = "0.3.3"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "b8850326ea9cb786aafd938f3de9866432904c0bae3aa0139a7a4e570b0174f6"
-dependencies = [
- "deno_error",
- "percent-encoding",
- "sys_traits",
- "thiserror 2.0.17",
- "url",
-]
-
-[[package]]
-name = "deno_unsync"
-version = "0.4.4"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "6742a724e8becb372a74c650a1aefb8924a5b8107f7d75b3848763ea24b27a87"
-dependencies = [
- "futures-util",
- "parking_lot",
- "tokio",
-]
-
-[[package]]
->>>>>>> Stashed changes
 name = "der"
 version = "0.7.10"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -3102,21 +2252,6 @@ dependencies = [
 ]
 
 [[package]]
-<<<<<<< Updated upstream
-=======
-name = "derive_builder_core"
-version = "0.20.2"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "2d5bcf7b024d6835cfb3d473887cd966994907effbe9227e8c8219824d06c4e8"
-dependencies = [
- "darling 0.20.11",
- "proc-macro2",
- "quote",
- "syn 2.0.107",
-]
-
-[[package]]
->>>>>>> Stashed changes
 name = "derive_builder_macro"
 version = "0.11.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -3142,18 +2277,7 @@ version = "1.0.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "4a9b99b9cbbe49445b21764dc0625032a89b145a2642e67603e1c936f5458d05"
 dependencies = [
-<<<<<<< Updated upstream
  "derive_more-impl 1.0.0",
-=======
- "derive_builder_core 0.20.2",
- "syn 2.0.107",
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
 ]
 
 [[package]]
@@ -3184,19 +2308,7 @@ checksum = "bda628edc44c4bb645fbe0f758797143e4e07926f7ebf4e9bdfbd3d2ce621df3"
 dependencies = [
  "proc-macro2",
  "quote",
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
  "syn 2.0.101",
-=======
- "syn 2.0.107",
->>>>>>> Stashed changes
-=======
- "syn 2.0.107",
->>>>>>> Stashed changes
-=======
- "syn 2.0.107",
->>>>>>> Stashed changes
  "unicode-xid",
 ]
 
@@ -3235,19 +2347,7 @@ checksum = "97369cbbc041bc366949bc74d34658d6cda5621039731c6310521892a3a20ae0"
 dependencies = [
  "proc-macro2",
  "quote",
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
  "syn 2.0.101",
-=======
- "syn 2.0.107",
->>>>>>> Stashed changes
-=======
- "syn 2.0.107",
->>>>>>> Stashed changes
-=======
- "syn 2.0.107",
->>>>>>> Stashed changes
 ]
 
 [[package]]
@@ -3299,21 +2399,6 @@ dependencies = [
 ]
 
 [[package]]
-<<<<<<< Updated upstream
-=======
-name = "educe"
-version = "0.6.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "1d7bc049e1bd8cdeb31b68bbd586a9464ecf9f3944af3958a7a9d0f8b9799417"
-dependencies = [
- "enum-ordinalize",
- "proc-macro2",
- "quote",
- "syn 2.0.107",
-]
-
-[[package]]
->>>>>>> Stashed changes
 name = "either"
 version = "1.15.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -3350,28 +2435,7 @@ version = "0.8.35"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "75030f3c4f45dafd7586dd6780965a8c7e8e285a5ecb86713e63a79c5b2766f3"
 dependencies = [
-<<<<<<< Updated upstream
  "cfg-if",
-=======
- "enum-ordinalize-derive",
-]
-
-[[package]]
-name = "enum-ordinalize-derive"
-version = "4.3.1"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "0d28318a75d4aead5c4db25382e8ef717932d0346600cacae6357eb5941bc5ff"
-dependencies = [
- "proc-macro2",
- "quote",
- "syn 2.0.107",
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
 ]
 
 [[package]]
@@ -3383,19 +2447,7 @@ dependencies = [
  "heck 0.4.1",
  "proc-macro2",
  "quote",
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
  "syn 2.0.101",
-=======
- "syn 2.0.107",
->>>>>>> Stashed changes
-=======
- "syn 2.0.107",
->>>>>>> Stashed changes
-=======
- "syn 2.0.107",
->>>>>>> Stashed changes
 ]
 
 [[package]]
@@ -3649,19 +2701,7 @@ checksum = "162ee34ebcb7c64a8abebc059ce0fee27c2262618d7b60ed8faf72fef13c3650"
 dependencies = [
  "proc-macro2",
  "quote",
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
  "syn 2.0.101",
-=======
- "syn 2.0.107",
->>>>>>> Stashed changes
-=======
- "syn 2.0.107",
->>>>>>> Stashed changes
-=======
- "syn 2.0.107",
->>>>>>> Stashed changes
 ]
 
 [[package]]
@@ -3737,45 +2777,21 @@ dependencies = [
  "cfg-if",
  "js-sys",
  "libc",
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
  "wasi 0.11.0+wasi-snapshot-preview1",
-=======
- "wasi",
->>>>>>> Stashed changes
-=======
- "wasi",
->>>>>>> Stashed changes
-=======
- "wasi",
->>>>>>> Stashed changes
  "wasm-bindgen",
 ]
 
 [[package]]
 name = "getrandom"
-version = "0.3.4"
+version = "0.3.3"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "899def5c37c4fd7b2664648c28120ecec138e4d395b459e5ca34f9cce2dd77fd"
+checksum = "26145e563e54f2cadc477553f1ec5ee650b00862f0a58bcd12cbdc5f0ea2d2f4"
 dependencies = [
  "cfg-if",
  "js-sys",
  "libc",
  "r-efi",
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
  "wasi 0.14.2+wasi-0.2.4",
-=======
- "wasip2",
->>>>>>> Stashed changes
-=======
- "wasip2",
->>>>>>> Stashed changes
-=======
- "wasip2",
->>>>>>> Stashed changes
  "wasm-bindgen",
 ]
 
@@ -3874,19 +2890,7 @@ dependencies = [
  "futures-core",
  "futures-sink",
  "http 1.3.1",
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
  "indexmap 2.9.0",
-=======
- "indexmap 2.12.0",
->>>>>>> Stashed changes
-=======
- "indexmap 2.12.0",
->>>>>>> Stashed changes
-=======
- "indexmap 2.12.0",
->>>>>>> Stashed changes
  "slab",
  "tokio",
  "tokio-util",
@@ -4129,18 +3133,7 @@ dependencies = [
  "http-body-util",
  "hyper",
  "hyper-util",
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
  "native-tls",
-=======
-=======
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
- "rustls 0.23.33",
- "rustls-pki-types",
->>>>>>> Stashed changes
  "tokio",
  "tokio-native-tls",
  "tower-service",
@@ -4324,19 +3317,7 @@ checksum = "a0eb5a3343abf848c0984fe4604b2b105da9539376e24fc0a3b0007411ae4fd9"
 dependencies = [
  "proc-macro2",
  "quote",
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
  "syn 2.0.101",
-=======
- "syn 2.0.107",
->>>>>>> Stashed changes
-=======
- "syn 2.0.107",
->>>>>>> Stashed changes
-=======
- "syn 2.0.107",
->>>>>>> Stashed changes
 ]
 
 [[package]]
@@ -4358,27 +3339,9 @@ dependencies = [
 
 [[package]]
 name = "indexmap"
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
 version = "2.9.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "cea70ddb795996207ad57735b50c5982d8844f38ba9ee5f1aedcfb708a2aa11e"
-=======
-version = "2.12.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "6717a8d2a5a929a1a2eb43a12812498ed141a0bcfb7e8f7844fbdbe4303bba9f"
->>>>>>> Stashed changes
-=======
-version = "2.12.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "6717a8d2a5a929a1a2eb43a12812498ed141a0bcfb7e8f7844fbdbe4303bba9f"
->>>>>>> Stashed changes
-=======
-version = "2.12.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "6717a8d2a5a929a1a2eb43a12812498ed141a0bcfb7e8f7844fbdbe4303bba9f"
->>>>>>> Stashed changes
 dependencies = [
  "equivalent",
  "hashbrown 0.15.3",
@@ -4774,19 +3737,7 @@ checksum = "1b27834086c65ec3f9387b096d66e99f221cf081c2b738042aa252bcd41204e3"
 dependencies = [
  "proc-macro2",
  "quote",
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
  "syn 2.0.101",
-=======
- "syn 2.0.107",
->>>>>>> Stashed changes
-=======
- "syn 2.0.107",
->>>>>>> Stashed changes
-=======
- "syn 2.0.107",
->>>>>>> Stashed changes
 ]
 
 [[package]]
@@ -4933,8 +3884,6 @@ dependencies = [
 
 [[package]]
 name = "mio"
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
 version = "0.8.11"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "a4a650543ca06a924e8b371db273b2756685faae30f8487da1b56505a8f78b0c"
@@ -4947,36 +3896,13 @@ dependencies = [
 
 [[package]]
 name = "mio"
-version = "1.1.0"
+version = "1.0.4"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "69d83b0086dc8ecf3ce9ae2874b2d1290252e2a30720bea58a5c6639b0092873"
+checksum = "78bed444cc8a2160f01cbcf811ef18cac863ad68ae8ca62092e8db51d51c761c"
 dependencies = [
  "libc",
-<<<<<<< Updated upstream
  "wasi 0.11.0+wasi-snapshot-preview1",
  "windows-sys 0.59.0",
-=======
- "wasi",
- "windows-sys 0.61.2",
->>>>>>> Stashed changes
-=======
-version = "1.1.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "69d83b0086dc8ecf3ce9ae2874b2d1290252e2a30720bea58a5c6639b0092873"
-dependencies = [
- "libc",
- "wasi",
- "windows-sys 0.61.2",
->>>>>>> Stashed changes
-=======
-version = "1.1.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "69d83b0086dc8ecf3ce9ae2874b2d1290252e2a30720bea58a5c6639b0092873"
-dependencies = [
- "libc",
- "wasi",
- "windows-sys 0.61.2",
->>>>>>> Stashed changes
 ]
 
 [[package]]
@@ -5559,31 +4485,6 @@ dependencies = [
 ]
 
 [[package]]
-<<<<<<< Updated upstream
-=======
-name = "num_enum"
-version = "0.7.5"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "b1207a7e20ad57b847bbddc6776b968420d38292bbfe2089accff5e19e82454c"
-dependencies = [
- "num_enum_derive",
- "rustversion",
-]
-
-[[package]]
-name = "num_enum_derive"
-version = "0.7.5"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "ff32365de1b6743cb203b710788263c44a03de03802daf96092f2da4fe6ba4d7"
-dependencies = [
- "proc-macro-crate",
- "proc-macro2",
- "quote",
- "syn 2.0.107",
-]
-
-[[package]]
->>>>>>> Stashed changes
 name = "nybbles"
 version = "0.3.4"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -5747,19 +4648,7 @@ dependencies = [
  "proc-macro-crate",
  "proc-macro2",
  "quote",
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
  "syn 2.0.101",
-=======
- "syn 2.0.107",
->>>>>>> Stashed changes
-=======
- "syn 2.0.107",
->>>>>>> Stashed changes
-=======
- "syn 2.0.107",
->>>>>>> Stashed changes
 ]
 
 [[package]]
@@ -5865,19 +4754,7 @@ dependencies = [
  "pest_meta",
  "proc-macro2",
  "quote",
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
  "syn 2.0.101",
-=======
- "syn 2.0.107",
->>>>>>> Stashed changes
-=======
- "syn 2.0.107",
->>>>>>> Stashed changes
-=======
- "syn 2.0.107",
->>>>>>> Stashed changes
 ]
 
 [[package]]
@@ -5892,31 +4769,6 @@ dependencies = [
 ]
 
 [[package]]
-<<<<<<< Updated upstream
-=======
-name = "petgraph"
-version = "0.7.1"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "3672b37090dbd86368a4145bc067582552b29c27377cad4e0a306c97f9bd7772"
-dependencies = [
- "fixedbitset",
- "indexmap 2.12.0",
-]
-
-[[package]]
-name = "petgraph"
-version = "0.8.3"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "8701b58ea97060d5e5b155d383a69952a60943f0e6dfe30b04c287beb0b27455"
-dependencies = [
- "fixedbitset",
- "hashbrown 0.15.5",
- "indexmap 2.12.0",
- "serde",
-]
-
-[[package]]
->>>>>>> Stashed changes
 name = "pharos"
 version = "0.5.3"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -5963,19 +4815,7 @@ checksum = "6e918e4ff8c4549eb882f14b3a4bc8c8bc93de829416eacf579f1207a8fbf861"
 dependencies = [
  "proc-macro2",
  "quote",
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
  "syn 2.0.101",
-=======
- "syn 2.0.107",
->>>>>>> Stashed changes
-=======
- "syn 2.0.107",
->>>>>>> Stashed changes
-=======
- "syn 2.0.107",
->>>>>>> Stashed changes
 ]
 
 [[package]]
@@ -6131,19 +4971,7 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "9dee91521343f4c5c6a63edd65e54f31f5c92fe8978c40a4282f8372194c6a7d"
 dependencies = [
  "proc-macro2",
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
  "syn 2.0.101",
-=======
- "syn 2.0.107",
->>>>>>> Stashed changes
-=======
- "syn 2.0.107",
->>>>>>> Stashed changes
-=======
- "syn 2.0.107",
->>>>>>> Stashed changes
 ]
 
 [[package]]
@@ -6219,46 +5047,7 @@ dependencies = [
  "proc-macro-error-attr2",
  "proc-macro2",
  "quote",
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
  "syn 2.0.101",
-=======
-=======
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
- "syn 2.0.107",
-]
-
-[[package]]
-name = "proc-macro-rules"
-version = "0.4.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "07c277e4e643ef00c1233393c673f655e3672cf7eb3ba08a00bdd0ea59139b5f"
-dependencies = [
- "proc-macro-rules-macros",
- "proc-macro2",
- "syn 2.0.107",
-]
-
-[[package]]
-name = "proc-macro-rules-macros"
-version = "0.4.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "207fffb0fe655d1d47f6af98cc2793405e85929bdbc420d685554ff07be27ac7"
-dependencies = [
- "once_cell",
- "proc-macro2",
- "quote",
- "syn 2.0.107",
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
 ]
 
 [[package]]
@@ -6291,135 +5080,12 @@ dependencies = [
 ]
 
 [[package]]
-<<<<<<< Updated upstream
-=======
-name = "prost"
-version = "0.13.5"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "2796faa41db3ec313a31f7624d9286acf277b52de526150b7e69f3debf891ee5"
-dependencies = [
- "bytes",
- "prost-derive",
-]
-
-[[package]]
-name = "prost-build"
-version = "0.13.5"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "be769465445e8c1474e9c5dac2018218498557af32d9ed057325ec9a41ae81bf"
-dependencies = [
- "heck 0.5.0",
- "itertools 0.14.0",
- "log",
- "multimap",
- "once_cell",
- "petgraph 0.7.1",
- "prettyplease",
- "prost",
- "prost-types",
- "regex",
- "syn 2.0.107",
- "tempfile",
-]
-
-[[package]]
-name = "prost-derive"
-version = "0.13.5"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "8a56d757972c98b346a9b766e3f02746cde6dd1cd1d1d563472929fdd74bec4d"
-dependencies = [
- "anyhow",
- "itertools 0.14.0",
- "proc-macro2",
- "quote",
- "syn 2.0.107",
-]
-
-[[package]]
-name = "prost-types"
-version = "0.13.5"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "52c2c1bf36ddb1a1c396b3601a3cec27c2462e45f07c386894ec3ccf5332bd16"
-dependencies = [
- "prost",
-]
-
-[[package]]
-name = "protoc-prebuilt"
-version = "0.3.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "4d85d4641fe3b8c6e853dfd09fe35379bc6b6e66bd692ac29ed4f7087de69ed5"
-dependencies = [
- "ureq",
- "zip",
-]
-
-[[package]]
->>>>>>> Stashed changes
 name = "quick-error"
 version = "1.2.3"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "a1d01941d82fa2ab50be1e79e6714289dd7cde78eba4c074bc5a4374f650dfe0"
 
 [[package]]
-<<<<<<< Updated upstream
-=======
-name = "quinn"
-version = "0.11.9"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "b9e20a958963c291dc322d98411f541009df2ced7b5a4f2bd52337638cfccf20"
-dependencies = [
- "bytes",
- "cfg_aliases",
- "pin-project-lite",
- "quinn-proto",
- "quinn-udp",
- "rustc-hash",
- "rustls 0.23.33",
- "socket2",
- "thiserror 2.0.17",
- "tokio",
- "tracing",
- "web-time 1.1.0",
-]
-
-[[package]]
-name = "quinn-proto"
-version = "0.11.13"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "f1906b49b0c3bc04b5fe5d86a77925ae6524a19b816ae38ce1e426255f1d8a31"
-dependencies = [
- "bytes",
- "getrandom 0.3.4",
- "lru-slab",
- "rand 0.9.2",
- "ring 0.17.14",
- "rustc-hash",
- "rustls 0.23.33",
- "rustls-pki-types",
- "slab",
- "thiserror 2.0.17",
- "tinyvec",
- "tracing",
- "web-time 1.1.0",
-]
-
-[[package]]
-name = "quinn-udp"
-version = "0.5.14"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "addec6a0dcad8a8d96a771f815f0eaf55f9d1805756410b39f5fa81332574cbd"
-dependencies = [
- "cfg_aliases",
- "libc",
- "once_cell",
- "socket2",
- "tracing",
- "windows-sys 0.60.2",
-]
-
-[[package]]
->>>>>>> Stashed changes
 name = "quote"
 version = "1.0.40"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -6507,18 +5173,7 @@ version = "0.9.3"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "99d9a13982dcf210057a8a78572b2217b667c3beacbf3a0d8b454f6f82837d38"
 dependencies = [
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
  "getrandom 0.3.3",
-=======
-=======
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
- "getrandom 0.3.4",
- "serde",
->>>>>>> Stashed changes
 ]
 
 [[package]]
@@ -6565,37 +5220,7 @@ version = "0.5.12"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "928fca9cf2aa042393a8325b9ead81d2f0df4cb12e1e24cef072922ccd99c5af"
 dependencies = [
-<<<<<<< Updated upstream
  "bitflags 2.9.1",
-=======
- "bitflags",
-]
-
-[[package]]
-name = "ref-cast"
-version = "1.0.25"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "f354300ae66f76f1c85c5f84693f0ce81d747e2c3f21a45fef496d89c960bf7d"
-dependencies = [
- "ref-cast-impl",
-]
-
-[[package]]
-name = "ref-cast-impl"
-version = "1.0.25"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "b7186006dcb21920990093f30e3dea63b7d6e977bf1256be20c3563a5db070da"
-dependencies = [
- "proc-macro2",
- "quote",
- "syn 2.0.107",
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
 ]
 
 [[package]]
@@ -6663,12 +5288,6 @@ dependencies = [
  "once_cell",
  "percent-encoding",
  "pin-project-lite",
-<<<<<<< Updated upstream
-=======
- "quinn",
- "rustls 0.23.33",
- "rustls-pki-types",
->>>>>>> Stashed changes
  "serde",
  "serde_json",
  "serde_urlencoded",
@@ -6822,9 +5441,6 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "48fd7bd8a6377e15ad9d42a8ec25371b94ddc67abe7c8b9127bec79bebaaae18"
 
 [[package]]
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
 name = "rust-ini"
 version = "0.20.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -6832,49 +5448,6 @@ checksum = "3e0698206bcb8882bf2a9ecb4c1e7785db57ff052297085a6efd4fe42302068a"
 dependencies = [
  "cfg-if",
  "ordered-multimap",
-=======
-name = "rust-embed"
-version = "8.8.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-=======
-name = "rust-embed"
-version = "8.8.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
->>>>>>> Stashed changes
-=======
-name = "rust-embed"
-version = "8.8.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
->>>>>>> Stashed changes
-checksum = "fb44e1917075637ee8c7bcb865cf8830e3a92b5b1189e44e3a0ab5a0d5be314b"
-dependencies = [
- "rust-embed-impl",
- "rust-embed-utils",
- "walkdir",
-]
-
-[[package]]
-name = "rust-embed-impl"
-version = "8.8.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "382499b49db77a7c19abd2a574f85ada7e9dbe125d5d1160fa5cad7c4cf71fc9"
-dependencies = [
- "proc-macro2",
- "quote",
- "rust-embed-utils",
- "syn 2.0.107",
- "walkdir",
-]
-
-[[package]]
-name = "rust-embed-utils"
-version = "8.8.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "21fcbee55c2458836bcdbfffb6ec9ba74bbc23ca7aa6816015a3dd2c4d8fc185"
-dependencies = [
- "sha2",
- "walkdir",
->>>>>>> Stashed changes
 ]
 
 [[package]]
@@ -6987,27 +5560,9 @@ dependencies = [
 
 [[package]]
 name = "rustls"
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
 version = "0.23.27"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "730944ca083c1c233a75c09f199e973ca499344a2b7ba9e755c457e86fb4a321"
-=======
-version = "0.23.33"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "751e04a496ca00bb97a5e043158d23d66b5aabf2e1d5aa2a0aaebb1aafe6f82c"
->>>>>>> Stashed changes
-=======
-version = "0.23.33"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "751e04a496ca00bb97a5e043158d23d66b5aabf2e1d5aa2a0aaebb1aafe6f82c"
->>>>>>> Stashed changes
-=======
-version = "0.23.33"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "751e04a496ca00bb97a5e043158d23d66b5aabf2e1d5aa2a0aaebb1aafe6f82c"
->>>>>>> Stashed changes
 dependencies = [
  "aws-lc-rs",
  "log",
@@ -7224,19 +5779,7 @@ checksum = "5b0276cf7f2c73365f7157c8123c21cd9a50fbbd844757af28ca1f5925fc2a00"
 dependencies = [
  "proc-macro2",
  "quote",
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
  "syn 2.0.101",
-=======
- "syn 2.0.107",
->>>>>>> Stashed changes
-=======
- "syn 2.0.107",
->>>>>>> Stashed changes
-=======
- "syn 2.0.107",
->>>>>>> Stashed changes
 ]
 
 [[package]]
@@ -7247,19 +5790,7 @@ checksum = "18d26a20a969b9e3fdf2fc2d9f21eda6c40e2de84c9408bb5d3b05d499aae711"
 dependencies = [
  "proc-macro2",
  "quote",
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
  "syn 2.0.101",
-=======
- "syn 2.0.107",
->>>>>>> Stashed changes
-=======
- "syn 2.0.107",
->>>>>>> Stashed changes
-=======
- "syn 2.0.107",
->>>>>>> Stashed changes
 ]
 
 [[package]]
@@ -7268,18 +5799,6 @@ version = "1.0.140"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "20068b6e96dc6c9bd23e01df8827e6c7e1f2fddd43c21810382803c136b99373"
 dependencies = [
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-=======
- "indexmap 2.12.0",
->>>>>>> Stashed changes
-=======
- "indexmap 2.12.0",
->>>>>>> Stashed changes
-=======
- "indexmap 2.12.0",
->>>>>>> Stashed changes
  "itoa",
  "memchr",
  "ryu",
@@ -7327,22 +5846,9 @@ dependencies = [
  "chrono",
  "hex",
  "indexmap 1.9.3",
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
  "indexmap 2.9.0",
  "serde",
  "serde_derive",
-=======
-=======
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
- "indexmap 2.12.0",
- "schemars 0.9.0",
- "schemars 1.0.4",
- "serde_core",
->>>>>>> Stashed changes
  "serde_json",
  "serde_with_macros",
  "time",
@@ -7357,9 +5863,6 @@ dependencies = [
  "darling 0.20.11",
  "proc-macro2",
  "quote",
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
  "syn 2.0.101",
 ]
 
@@ -7374,15 +5877,6 @@ dependencies = [
  "ryu",
  "serde",
  "unsafe-libyaml",
-=======
- "syn 2.0.107",
->>>>>>> Stashed changes
-=======
- "syn 2.0.107",
->>>>>>> Stashed changes
-=======
- "syn 2.0.107",
->>>>>>> Stashed changes
 ]
 
 [[package]]
@@ -7647,20 +6141,8 @@ dependencies = [
  "heck 0.5.0",
  "proc-macro2",
  "quote",
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
  "rustversion",
  "syn 2.0.101",
-=======
- "syn 2.0.107",
->>>>>>> Stashed changes
-=======
- "syn 2.0.107",
->>>>>>> Stashed changes
-=======
- "syn 2.0.107",
->>>>>>> Stashed changes
 ]
 
 [[package]]
@@ -7682,27 +6164,9 @@ dependencies = [
 
 [[package]]
 name = "syn"
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
 version = "2.0.101"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "8ce2b7fc941b3a24138a0a7cf8e858bfc6a992e7978a068a5c760deb0ed43caf"
-=======
-version = "2.0.107"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "2a26dbd934e5451d21ef060c018dae56fc073894c5a7896f882928a76e6d081b"
->>>>>>> Stashed changes
-=======
-version = "2.0.107"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "2a26dbd934e5451d21ef060c018dae56fc073894c5a7896f882928a76e6d081b"
->>>>>>> Stashed changes
-=======
-version = "2.0.107"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "2a26dbd934e5451d21ef060c018dae56fc073894c5a7896f882928a76e6d081b"
->>>>>>> Stashed changes
 dependencies = [
  "proc-macro2",
  "quote",
@@ -7718,19 +6182,7 @@ dependencies = [
  "paste",
  "proc-macro2",
  "quote",
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
  "syn 2.0.101",
-=======
- "syn 2.0.107",
->>>>>>> Stashed changes
-=======
- "syn 2.0.107",
->>>>>>> Stashed changes
-=======
- "syn 2.0.107",
->>>>>>> Stashed changes
 ]
 
 [[package]]
@@ -7750,58 +6202,7 @@ checksum = "728a70f3dbaf5bab7f0c4b1ac8d7ae5ea60a4b5549c8a5914361c99147a709d2"
 dependencies = [
  "proc-macro2",
  "quote",
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
  "syn 2.0.101",
-=======
-=======
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
- "syn 2.0.107",
-]
-
-[[package]]
-name = "sys_traits"
-version = "0.1.18"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "024143c2bb7cc3ee41771de716b4fba227e98fda9bc8b2053ed83a92eb8722bd"
-dependencies = [
- "sys_traits_macros",
-]
-
-[[package]]
-name = "sys_traits_macros"
-version = "0.1.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "181f22127402abcf8ee5c83ccd5b408933fec36a6095cf82cda545634692657e"
-dependencies = [
- "proc-macro2",
- "quote",
- "syn 2.0.107",
-]
-
-[[package]]
-name = "system-configuration"
-version = "0.6.1"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "3c879d448e9d986b661742763247d3693ed13609438cf3d006f51f5368a5ba6b"
-dependencies = [
- "bitflags",
- "core-foundation",
- "system-configuration-sys",
-]
-
-[[package]]
-name = "system-configuration-sys"
-version = "0.6.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "8e1d1b10ced5ca923a1fcb8d03e96b8d3268065d724548c0211415ff6ac6bac4"
-dependencies = [
- "core-foundation-sys",
- "libc",
->>>>>>> Stashed changes
 ]
 
 [[package]]
@@ -7817,7 +6218,7 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "e8a64e3985349f2441a1a9ef0b853f869006c3855f2cda6862a94d26ebb9d6a1"
 dependencies = [
  "fastrand",
- "getrandom 0.3.4",
+ "getrandom 0.3.3",
  "once_cell",
  "rustix 1.0.7",
  "windows-sys 0.59.0",
@@ -7867,19 +6268,7 @@ checksum = "4fee6c4efc90059e10f81e6d42c60a18f76588c3d74cb83a0b242a2b6c7504c1"
 dependencies = [
  "proc-macro2",
  "quote",
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
  "syn 2.0.101",
-=======
- "syn 2.0.107",
->>>>>>> Stashed changes
-=======
- "syn 2.0.107",
->>>>>>> Stashed changes
-=======
- "syn 2.0.107",
->>>>>>> Stashed changes
 ]
 
 [[package]]
@@ -7890,19 +6279,7 @@ checksum = "7f7cf42b4507d8ea322120659672cf1b9dbb93f8f2d4ecfd6e51350ff5b17a1d"
 dependencies = [
  "proc-macro2",
  "quote",
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
  "syn 2.0.101",
-=======
- "syn 2.0.107",
->>>>>>> Stashed changes
-=======
- "syn 2.0.107",
->>>>>>> Stashed changes
-=======
- "syn 2.0.107",
->>>>>>> Stashed changes
 ]
 
 [[package]]
@@ -8177,7 +6554,7 @@ dependencies = [
  "anyhow",
  "futures",
  "getrandom 0.2.16",
- "getrandom 0.3.4",
+ "getrandom 0.3.3",
  "gloo-utils",
  "http-body-util",
  "hyper",
@@ -8503,7 +6880,7 @@ dependencies = [
  "enum-try-as-inner",
  "futures",
  "getrandom 0.2.16",
- "getrandom 0.3.4",
+ "getrandom 0.3.3",
  "http-body-util",
  "hyper",
  "js-sys",
@@ -8556,9 +6933,6 @@ checksum = "6e06d43f1345a3bcd39f6a56dbb7dcab2ba47e68e8ac134855e7e2bdbaf8cab8"
 dependencies = [
  "proc-macro2",
  "quote",
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
  "syn 2.0.101",
 ]
 
@@ -8570,15 +6944,6 @@ checksum = "bbae76ab933c85776efabc971569dd6119c580d8f5d448769dec1764bf796ef2"
 dependencies = [
  "native-tls",
  "tokio",
-=======
- "syn 2.0.107",
->>>>>>> Stashed changes
-=======
- "syn 2.0.107",
->>>>>>> Stashed changes
-=======
- "syn 2.0.107",
->>>>>>> Stashed changes
 ]
 
 [[package]]
@@ -8587,19 +6952,7 @@ version = "0.24.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "c28327cf380ac148141087fbfb9de9d7bd4e84ab5d2c28fbc911d753de8a7081"
 dependencies = [
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
  "rustls 0.21.12",
-=======
- "rustls 0.23.33",
->>>>>>> Stashed changes
-=======
- "rustls 0.23.33",
->>>>>>> Stashed changes
-=======
- "rustls 0.23.33",
->>>>>>> Stashed changes
  "tokio",
 ]
 
@@ -8668,61 +7021,12 @@ version = "0.22.26"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "310068873db2c5b3e7659d2cc35d21855dbafa50d1ce336397c666e3cb08137e"
 dependencies = [
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
  "indexmap 2.9.0",
  "serde",
  "serde_spanned",
  "toml_datetime",
  "toml_write",
  "winnow",
-=======
-=======
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
- "indexmap 2.12.0",
- "serde",
- "serde_spanned",
- "toml_datetime 0.6.11",
- "winnow 0.5.40",
-]
-
-[[package]]
-name = "toml_edit"
-version = "0.22.27"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "41fe8c660ae4257887cf66394862d21dbca4a6ddd26f04a3560410406a2f819a"
-dependencies = [
- "indexmap 2.12.0",
- "serde",
- "serde_spanned",
- "toml_datetime 0.6.11",
- "toml_write",
- "winnow 0.7.13",
-]
-
-[[package]]
-name = "toml_edit"
-version = "0.23.7"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "6485ef6d0d9b5d0ec17244ff7eb05310113c3f316f2d14200d4de56b3cb98f8d"
-dependencies = [
- "indexmap 2.12.0",
- "toml_datetime 0.7.3",
- "toml_parser",
- "winnow 0.7.13",
-]
-
-[[package]]
-name = "toml_parser"
-version = "1.0.4"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "c0cbe268d35bdb4bb5a56a2de88d0ad0eb70af5384a99d648cd4b3d04039800e"
-dependencies = [
- "winnow 0.7.13",
->>>>>>> Stashed changes
 ]
 
 [[package]]
@@ -8835,19 +7139,7 @@ checksum = "395ae124c09f9e6918a2310af6038fba074bcf474ac352496d5910dd59a2226d"
 dependencies = [
  "proc-macro2",
  "quote",
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
  "syn 2.0.101",
-=======
- "syn 2.0.107",
->>>>>>> Stashed changes
-=======
- "syn 2.0.107",
->>>>>>> Stashed changes
-=======
- "syn 2.0.107",
->>>>>>> Stashed changes
 ]
 
 [[package]]
@@ -8943,19 +7235,7 @@ dependencies = [
  "proc-macro2",
  "quote",
  "serde_derive_internals",
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
  "syn 2.0.101",
-=======
- "syn 2.0.107",
->>>>>>> Stashed changes
-=======
- "syn 2.0.107",
->>>>>>> Stashed changes
-=======
- "syn 2.0.107",
->>>>>>> Stashed changes
 ]
 
 [[package]]
@@ -9129,30 +7409,6 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "8ecb6da28b8a351d773b68d5825ac39017e680750f980f3a1a85cd8dd28a47c1"
 
 [[package]]
-<<<<<<< Updated upstream
-=======
-name = "unty"
-version = "0.0.4"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "6d49784317cd0d1ee7ec5c716dd598ec5b4483ea832a2dced265471cc0f690ae"
-
-[[package]]
-name = "ureq"
-version = "2.12.1"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "02d1a66277ed75f640d608235660df48c8e3c19f3b4edb6a263315626cc3c01d"
-dependencies = [
- "base64 0.22.1",
- "log",
- "once_cell",
- "rustls 0.23.33",
- "rustls-pki-types",
- "url",
- "webpki-roots 0.26.11",
-]
-
-[[package]]
->>>>>>> Stashed changes
 name = "url"
 version = "2.5.4"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -9258,27 +7514,12 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "9c8d87e72b64a3b4db28d11ce29237c246188f4f51057d65a7eab63b7987e423"
 
 [[package]]
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
 name = "wasi"
 version = "0.14.2+wasi-0.2.4"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "9683f9a5a998d873c0d21fcbe3c083009670149a8fab228644b8bd36b2c48cb3"
 dependencies = [
  "wit-bindgen-rt",
-=======
-=======
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
-name = "wasip2"
-version = "1.0.1+wasi-0.2.4"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "0562428422c63773dad2c345a1882263bbf4d65cf3f42e90921f787ef5ad58e7"
-dependencies = [
- "wit-bindgen",
->>>>>>> Stashed changes
 ]
 
 [[package]]
@@ -9303,19 +7544,7 @@ dependencies = [
  "log",
  "proc-macro2",
  "quote",
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
  "syn 2.0.101",
-=======
- "syn 2.0.107",
->>>>>>> Stashed changes
-=======
- "syn 2.0.107",
->>>>>>> Stashed changes
-=======
- "syn 2.0.107",
->>>>>>> Stashed changes
  "wasm-bindgen-shared",
 ]
 
@@ -9350,19 +7579,7 @@ checksum = "8ae87ea40c9f689fc23f209965b6fb8a99ad69aeeb0231408be24920604395de"
 dependencies = [
  "proc-macro2",
  "quote",
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
  "syn 2.0.101",
-=======
- "syn 2.0.107",
->>>>>>> Stashed changes
-=======
- "syn 2.0.107",
->>>>>>> Stashed changes
-=======
- "syn 2.0.107",
->>>>>>> Stashed changes
  "wasm-bindgen-backend",
  "wasm-bindgen-shared",
 ]
@@ -9539,19 +7756,7 @@ checksum = "a47fddd13af08290e67f4acabf4b459f647552718f683a7b415d290ac744a836"
 dependencies = [
  "proc-macro2",
  "quote",
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
  "syn 2.0.101",
-=======
- "syn 2.0.107",
->>>>>>> Stashed changes
-=======
- "syn 2.0.107",
->>>>>>> Stashed changes
-=======
- "syn 2.0.107",
->>>>>>> Stashed changes
 ]
 
 [[package]]
@@ -9562,19 +7767,7 @@ checksum = "bd9211b69f8dcdfa817bfd14bf1c97c9188afa36f4750130fcdf3f400eca9fa8"
 dependencies = [
  "proc-macro2",
  "quote",
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
  "syn 2.0.101",
-=======
- "syn 2.0.107",
->>>>>>> Stashed changes
-=======
- "syn 2.0.107",
->>>>>>> Stashed changes
-=======
- "syn 2.0.107",
->>>>>>> Stashed changes
 ]
 
 [[package]]
@@ -9953,19 +8146,7 @@ checksum = "38da3c9736e16c5d3c8c597a9aaa5d1fa565d0532ae05e27c24aa62fb32c0ab6"
 dependencies = [
  "proc-macro2",
  "quote",
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
  "syn 2.0.101",
-=======
- "syn 2.0.107",
->>>>>>> Stashed changes
-=======
- "syn 2.0.107",
->>>>>>> Stashed changes
-=======
- "syn 2.0.107",
->>>>>>> Stashed changes
  "synstructure",
 ]
 
@@ -9986,19 +8167,7 @@ checksum = "28a6e20d751156648aa063f3800b706ee209a32c0b4d9f24be3d980b01be55ef"
 dependencies = [
  "proc-macro2",
  "quote",
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
  "syn 2.0.101",
-=======
- "syn 2.0.107",
->>>>>>> Stashed changes
-=======
- "syn 2.0.107",
->>>>>>> Stashed changes
-=======
- "syn 2.0.107",
->>>>>>> Stashed changes
 ]
 
 [[package]]
@@ -10018,19 +8187,7 @@ checksum = "d71e5d6e06ab090c67b5e44993ec16b72dcbaabc526db883a360057678b48502"
 dependencies = [
  "proc-macro2",
  "quote",
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
  "syn 2.0.101",
-=======
- "syn 2.0.107",
->>>>>>> Stashed changes
-=======
- "syn 2.0.107",
->>>>>>> Stashed changes
-=======
- "syn 2.0.107",
->>>>>>> Stashed changes
  "synstructure",
 ]
 
@@ -10051,19 +8208,7 @@ checksum = "ce36e65b0d2999d2aafac989fb249189a141aee1f53c612c1f37d72631959f69"
 dependencies = [
  "proc-macro2",
  "quote",
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
  "syn 2.0.101",
-=======
- "syn 2.0.107",
->>>>>>> Stashed changes
-=======
- "syn 2.0.107",
->>>>>>> Stashed changes
-=======
- "syn 2.0.107",
->>>>>>> Stashed changes
 ]
 
 [[package]]
@@ -10096,27 +8241,5 @@ checksum = "5b96237efa0c878c64bd89c436f661be4e46b2f3eff1ebb976f7ef2321d2f58f"
 dependencies = [
  "proc-macro2",
  "quote",
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
  "syn 2.0.101",
-=======
-=======
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
- "syn 2.0.107",
-]
-
-[[package]]
-name = "zip"
-version = "0.6.6"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "760394e246e4c28189f19d488c058bf16f564016aefac5d32bb1f3b51d5e9261"
-dependencies = [
- "byteorder",
- "crc32fast",
- "crossbeam-utils",
- "flate2",
->>>>>>> Stashed changes
 ]

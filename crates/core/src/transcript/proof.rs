@@ -36,6 +36,21 @@ pub struct TranscriptProof {
 opaque_debug::implement!(TranscriptProof);
 
 impl TranscriptProof {
+    /// Returns a reference to the encoding proof, if present.
+    pub fn encoding_proof(&self) -> Option<&EncodingProof> {
+        self.encoding_proof.as_ref()
+    }
+
+    /// Returns a reference to the partial transcript.
+    pub fn partial_transcript(&self) -> &PartialTranscript {
+        &self.transcript
+    }
+
+    /// Returns a reference to the hash secrets.
+    pub fn hash_secrets(&self) -> &[PlaintextHashSecret] {
+        &self.hash_secrets
+    }
+
     /// Verifies the proof.
     ///
     /// Returns a partial transcript of authenticated data.

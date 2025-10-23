@@ -75,6 +75,7 @@ impl<'a> RequestBuilder<'a> {
         let signature_alg = *config.signature_alg();
         let hash_alg = *config.hash_alg();
 
+        println!("aca1");
         let hasher = provider.hash.get(&hash_alg).map_err(|_| {
             RequestBuilderError::new(format!("unsupported hash algorithm: {hash_alg}"))
         })?;

@@ -69,6 +69,7 @@ impl<'a> AttestationBuilder<'a, Accept> {
         }
 
         if !config.supported_hash_algs().contains(&hash_alg) {
+            println!("aca");
             return Err(AttestationBuilderError::new(
                 ErrorKind::Request,
                 format!("unsupported hash algorithm: {hash_alg}"),

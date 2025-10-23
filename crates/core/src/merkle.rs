@@ -17,10 +17,10 @@ impl MerkleError {
 }
 
 #[derive(Clone, Serialize, Deserialize)]
-pub(crate) struct MerkleProof {
-    alg: HashAlgId,
-    leaf_count: usize,
-    proof: rs_merkle::MerkleProof<Hash>,
+pub struct MerkleProof {
+    pub alg: HashAlgId,
+    pub leaf_count: usize,
+    pub proof: rs_merkle::MerkleProof<Hash>,
 }
 
 opaque_debug::implement!(MerkleProof);
@@ -64,8 +64,18 @@ impl MerkleProof {
     }
 
     /// Returns the leaf count of the Merkle tree associated with the proof.
-    pub(crate) fn leaf_count(&self) -> usize {
+    pub fn leaf_count(&self) -> usize {
         self.leaf_count
+    }
+
+    /// Returns the hash algorithm used for the Merkle tree.
+    pub fn algorithm(&self) -> HashAlgId {
+        self.alg
+    }
+
+    /// Returns the proof hashes (sibling hashes along the path to the root).
+    pub fn proof_hashes(&self) -> &[Hash] {
+        self.proof.proof_hashes()
     }
 }
 

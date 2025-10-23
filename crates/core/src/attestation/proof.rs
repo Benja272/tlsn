@@ -43,6 +43,16 @@ impl AttestationProof {
         self.body.verifying_key()
     }
 
+    /// Returns a reference to the body's Merkle proof.
+    pub fn body_merkle_proof(&self) -> &MerkleProof {
+        &self.body.proof
+    }
+
+    /// Returns a reference to the body.
+    pub fn body(&self) -> &Body {
+        &self.body.body
+    }
+
     /// Verifies the attestation proof.
     ///
     /// # Arguments

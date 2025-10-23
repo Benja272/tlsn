@@ -16,10 +16,10 @@ use crate::{
 
 /// An opening of a leaf in the encoding tree.
 #[derive(Clone, Serialize, Deserialize)]
-pub(super) struct Opening {
-    pub(super) direction: Direction,
-    pub(super) idx: Idx,
-    pub(super) blinder: Blinder,
+pub struct Opening {
+    pub direction: Direction,
+    pub idx: Idx,
+    pub blinder: Blinder,
 }
 
 opaque_debug::implement!(Opening);
@@ -30,11 +30,21 @@ opaque_debug::implement!(Opening);
 pub struct EncodingProof {
     /// The proof of inclusion of the commitment(s) in the Merkle tree of
     /// commitments.
-    pub(super) inclusion_proof: MerkleProof,
-    pub(super) openings: HashMap<usize, Opening>,
+    pub inclusion_proof: MerkleProof,
+    pub openings: HashMap<usize, Opening>,
 }
 
 impl EncodingProof {
+    /// Returns a reference to the Merkle inclusion proof.
+    pub fn merkle_proof(&self) -> &MerkleProof {
+        &self.inclusion_proof
+    }
+
+    /// Returns a reference to the leaf openings.
+    pub fn leaf_openings(&self) -> &HashMap<usize, Opening> {
+        &self.openings
+    }
+
     /// Verifies the proof against the commitment.
     ///
     /// Returns the authenticated indices of the sent and received data,

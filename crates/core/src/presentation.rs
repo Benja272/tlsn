@@ -59,6 +59,16 @@ impl Presentation {
         self.attestation.verifying_key()
     }
 
+    /// Returns a reference to the transcript proof, if present.
+    pub fn transcript_proof(&self) -> Option<&TranscriptProof> {
+        self.transcript.as_ref()
+    }
+
+    /// Returns a reference to the attestation proof.
+    pub fn attestation_proof(&self) -> &AttestationProof {
+        &self.attestation
+    }
+
     /// Verifies the presentation.
     pub fn verify(
         self,

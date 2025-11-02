@@ -16,7 +16,7 @@ use crate::{
 pub struct AttestationProof {
     signature: Signature,
     header: Header,
-    body: BodyProof,
+    body: BodyProof, 
 }
 
 impl AttestationProof {

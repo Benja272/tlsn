@@ -24,7 +24,7 @@ use tlsn_core::hash::{HashAlgId, HashAlgorithm, Sha256};
 use tlsn_core::signing::{Secp256k1EthVerifier, SignatureAlgId};
 use tokio::net::TcpListener;
 use tokio_util::compat::{FuturesAsyncReadCompatExt, TokioAsyncReadCompatExt};
-use tracing::{error, info};
+use tracing::error;
 
 use notary_client::{Accepted, NotarizationRequest, NotaryClient};
 use tlsn_common::config::ProtocolConfig;
@@ -76,9 +76,16 @@ struct BodyMerkleProof {
     /// Index of committed_hash in field_hashes
     leaf_index: usize,
     /// Merkle proof hashes (sibling hashes along the path)
+    /// NOTE: This will be minimal/empty because attestation proves ALL fields.
+    /// For gas-efficient on-chain verification of a single field, use all_field_hashes
+    /// to reconstruct the Merkle tree off-chain.
     proof_hashes: Vec<Vec<u8>>,
     /// Total number of leaves in the tree
     leaf_count: usize,
+    /// All field hashes in the Merkle tree (for off-chain verification)
+    /// This allows verifiers to reconstruct the full tree and generate
+    /// a single-field proof if needed for gas optimization.
+    all_field_hashes: Vec<Vec<u8>>,
 }
 
 /// Hash commitment proof data for on-chain verification
@@ -88,9 +95,10 @@ struct HashProofData {
     hash_algorithm: u8,
     /// The committed hash: hash(plaintext || blinder)
     committed_hash: Vec<u8>,
-    /// The plaintext price value (the proof!)
+    /// The FULL committed plaintext (entire HTTP response)
+    /// Extract the price using plaintext[price_range]
     plaintext: String,
-    /// Byte range of the price in the received data
+    /// Byte range of the price within the plaintext
     price_range: std::ops::Range<usize>,
     /// The blinder used in the hash
     blinder: Vec<u8>,
@@ -376,9 +384,6 @@ async fn generate_oracle_proof() -> Result<OracleResponse, Box<dyn std::error::E
 
     // Get the plaintext from the partial transcript
     let partial_transcript = transcript_proof_ref.partial_transcript();
-    let plaintext_price = std::str::from_utf8(
-        &partial_transcript.received_unsafe()[price_range.start..price_range.end]
-    )?;
 
     // The committed hash is hash(plaintext || blinder)
     // We can reconstruct it from the secret directly
@@ -402,10 +407,18 @@ async fn generate_oracle_proof() -> Result<OracleResponse, Box<dyn std::error::E
     );
     let committed_hash_raw = committed_hash_typed.value.value[..committed_hash_typed.value.len].to_vec();
 
+    // Convert the full committed plaintext to UTF-8 string
+    let full_plaintext_str = match std::str::from_utf8(&plaintext_data) {
+        Ok(s) => s.to_string(),
+        Err(_) => {
+            hex::encode(&plaintext_data)
+        }
+    };
+
     let hash_proof_data = HashProofData {
         hash_algorithm: 1, // SHA256
         committed_hash: committed_hash_raw,
-        plaintext: plaintext_price.to_string(),
+        plaintext: full_plaintext_str, // FULL HTTP response, not just price!
         price_range: price_range.clone(),
         blinder: price_hash_secret.blinder.as_bytes().to_vec(),
         direction: "Received".to_string(),
@@ -431,13 +444,12 @@ async fn generate_oracle_proof() -> Result<OracleResponse, Box<dyn std::error::E
     let field_hashes_with_kind: Vec<_> = attestation.body.hash_fields(&hasher);
     let field_hashes: Vec<Vec<u8>> = field_hashes_with_kind
         .iter()
-        .map(|(_, hash)| hash.value.to_vec())
+        .map(|(_, hash)| hash.value[..hash.len].to_vec())  // Only include actual hash bytes, not padding
         .collect();
 
     // Get the body Merkle proof from the attestation
     // The presentation already contains a Merkle proof showing all body fields are in header.root
     let attestation_proof = presentation.attestation_proof();
-    let body_merkle_proof_from_attestation = attestation_proof.body_merkle_proof();
 
     // The transcript commitment is the 5th field (index 4) after:
     // verifying_key, connection_info, server_ephemeral_key, cert_commitment
@@ -446,16 +458,30 @@ async fn generate_oracle_proof() -> Result<OracleResponse, Box<dyn std::error::E
 
     println!("  - Committed hash is at field index: {}", committed_hash_field_index);
 
-    // Build the body Merkle proof data
+    // Extract Merkle proof from attestation
+    // NOTE: The attestation proof proves ALL fields at once (indices 0-4).
+    // For gas-efficient on-chain verification, you would ideally create a proof
+    // for just the transcript commitment field (index 4).
+    // Since we can't create single-field proofs here (MerkleTree is private),
+    // we provide all field hashes so verifiers can reconstruct the tree off-chain.
+    let merkle_proof = attestation_proof.body_merkle_proof();
+
     let body_merkle_proof = BodyMerkleProof {
-        root: attestation.header.root.value.value.to_vec(),
+        root: attestation.header.root.value.value[..attestation.header.root.value.len].to_vec(),
         leaf_index: committed_hash_field_index,
-        proof_hashes: body_merkle_proof_from_attestation
+        // proof_hashes will be minimal/empty because attestation proves ALL fields
+        // For a single-field proof, these would contain sibling hashes along the path
+        proof_hashes: merkle_proof
             .proof_hashes()
             .iter()
-            .map(|h| h.value.to_vec())
+            .map(|h| h.value[..h.len].to_vec())  // Only include actual hash bytes
             .collect(),
-        leaf_count: body_merkle_proof_from_attestation.leaf_count(),
+        leaf_count: field_hashes_with_kind.len(),
+        // Include ALL field hashes so verifier can reconstruct the tree if needed
+        all_field_hashes: field_hashes_with_kind
+            .iter()
+            .map(|(_, hash)| hash.value[..hash.len].to_vec())  // Only include actual hash bytes
+            .collect(),
     };
 
     println!("✅ Body Merkle proof extracted:");
